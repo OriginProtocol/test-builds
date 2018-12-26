@@ -8,7 +8,7 @@ To add your own test dapp build, follow these steps:
 2. `git clone git@github.com:OriginProtocol/test-builds.git`
 3. Build you dapp: `cd origin/experimental/origin-dapp2 && npm run build`
 4. Change to test-build repo: `cd ../../../test-builds`
-5. Copy build: `./copy-build [your-name]`
+5. Copy build: `./copy-build.sh [your-name]`
 6. Optionally add your build directory to `index.html`
 7. Commit to git: `git commit -am "My new test build"`
 8. Wait a minute or two for GitHub pages to pick up the changes
