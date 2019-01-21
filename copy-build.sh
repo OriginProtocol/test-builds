@@ -5,5 +5,5 @@ if [ "$1" == "" ]; then
 fi
 
 mkdir -p $1
-rm $1/app.*
+rm $1/app.* || true
 cp -r ../origin/experimental/origin-dapp2/public/* $1
