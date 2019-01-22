@@ -486,7 +486,7 @@
   height: 100%;
   width: 100%;
   vertical-align: middle;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .pl-modal .pl-modal-table {
@@ -913,6 +913,58 @@
   color: var(--dark);
   font-weight: normal;
   position: relative;
+}
+
+.pl-modal .pl-modal-table .pl-modal-cell .pl-modal-content {
+  max-width: 580px;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.fulfillment-modal .content h2 {
+  text-align: center;
+}
+
+.fulfillment-modal .content .step {
+  background: var(--dark);
+  color: var(--white);
+  min-width: 1.6rem;
+  padding: 0.2rem 0.5rem;
+  height: 1.6rem;
+  border-radius: 2rem;
+  line-height: 1.6rem;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.fulfillment-modal .content .checklist span.text {
+  display: table-cell;
+  padding-left: 10px;
+}
+
+.fulfillment-modal .content .checklist {
+  padding-bottom: 40px;
+}
+
+.fulfillment-modal .content {
+  height: 100%;
+  text-align: left;
+  line-height: 2.5;
+}
+
+.fulfillment-modal.mobile .content {
+  line-height: 2;
+}
+
+.fulfillment-modal.mobile {
+  padding: 1rem;
+}
+
+.btn-outline-light {
+  width: 50%;
+  align-self: center;
 }
 
 .tx-history {
