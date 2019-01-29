@@ -2790,13 +2790,13 @@ footer .copyright {
 .with-symbol > span.eth {
   padding-left: 1.75rem;
   color: var(--bluish-purple);
-  background-image: url(/images/eth-icon.svg);
+  background-image: url(images/eth-icon.svg);
 }
 
 .with-symbol > span.ogn {
   padding-left: 1.75rem;
   color: var(--clear-blue);
-  background-image: url(/images/ogn-icon.svg);
+  background-image: url(images/ogn-icon.svg);
 }
 
 .with-symbol > span.usd::before {
