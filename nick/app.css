@@ -483,6 +483,185 @@
   border: 2px dashed transparent;
 }
 
+.calendar {
+  margin-bottom: 2rem;
+}
+
+.calendar.calendar-sm .days > .day {
+  height: auto;
+}
+
+.calendar .days > .empty.first-row {
+  border-bottom: 1px solid #c2cbd3;
+}
+
+.calendar .days > .day.end-row {
+  border-right-width: 1px;
+}
+
+.calendar .days > .day.in-past,
+.calendar .days > .day.unavailable {
+  background-color: var(--pale-grey);
+}
+
+.calendar .days > .day.unavailable div:nth-child(2) {
+  color: var(--light);
+}
+
+.calendar .days > .day > div:nth-child(2) {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.calendar .days > .day::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+}
+
+.calendar .days > .day.active::after {
+  cursor: pointer;
+}
+
+.calendar .days > .day.active.unselected:hover::after {
+  border: 3px solid black;
+}
+
+.calendar .days > .day.start,
+.calendar .days > .day.mid,
+.calendar .days > .day.end {
+  background-color: var(--pale-clear-blue);
+}
+
+.calendar .days > .day.start::after {
+  border-width: 3px 0 3px 3px;
+  border-color: black;
+}
+
+.calendar .days > .day.mid::after {
+  border-width: 3px 0 3px 0;
+  border-color: black;
+}
+
+.calendar .days > .day.end::after {
+  border-width: 3px 3px 3px 0;
+  border-color: black;
+}
+
+.calendar .days > .day.single::after {
+  border-width: 3px;
+  border-color: black;
+}
+
+.calendar .days > .day.nbb::after {
+  border-bottom-color: transparent;
+}
+
+.calendar .days > .day.nbt::after {
+  border-top-color: transparent;
+}
+
+.calendar .days > .day {
+  height: 6vw;
+  min-height: 3.5rem;
+  color: #455d75;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  min-width: 0;
+  border-style: solid;
+  border-color: #c2cbd3;
+  border-width: 0 0 1px 1px;
+  position: relative;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.calendar .days.inactive > div:hover.start::after,
+.calendar .days.inactive > div:hover.end::after,
+.calendar .days.inactive > div:hover.mid::after {
+  border-color: blue;
+  border-width: 3px;
+  z-index: 3;
+}
+
+.calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.calendar .day-header > div {
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.calendar .day-header {
+  display: flex;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #c2cbd3;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--bluey-grey);
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.calendar .month-chooser .btn::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-width: 0 0 1px 1px;
+  border-color: #979797;
+  border-style: solid;
+  display: inline-block;
+  -ms-transform: rotate(45deg) translate(3px, -1px);
+  -moz-transform: rotate(45deg) translate(3px, -1px);
+  -webkit-transform: rotate(45deg) translate(3px, -1px);
+  transform: rotate(45deg) translate(3px, -1px);
+}
+
+.calendar .month-chooser .btn.next::before {
+  -ms-transform: rotate(225deg) translate(1px, -2px);
+  -moz-transform: rotate(225deg) translate(1px, -2px);
+  -webkit-transform: rotate(225deg) translate(1px, -2px);
+  transform: rotate(225deg) translate(1px, -2px);
+}
+
+.calendar .month-chooser .btn:hover::before {
+  border-color: var(--white);
+}
+
+.calendar .month-chooser .btn {
+  border-color: #c2cbd3;
+}
+
+.calendar .month-chooser {
+  display: flex;
+  justify-content: space-between;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 300;
+}
+
 .coin-price {
   display: inline-block;
   padding-left: 1.625rem;
@@ -2572,19 +2751,6 @@ footer .copyright {
   color: var(--dusk);
 }
 
-.create-listing .create-listing-step-2 .actions .btn {
-  min-width: 10rem;
-  border-radius: 2rem;
-  padding: 0.625rem;
-  font-size: 18px;
-}
-
-.create-listing .create-listing-step-2 .actions {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .with-symbol {
   position: relative;
 }
@@ -2680,6 +2846,19 @@ footer .copyright {
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
+}
+
+.create-listing .actions .btn {
+  min-width: 10rem;
+  border-radius: 2rem;
+  padding: 0.625rem;
+  font-size: 18px;
+}
+
+.create-listing .actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .create-listing .create-listing-review .fiat {
@@ -2803,7 +2982,7 @@ footer .copyright {
 
 .create-listing .create-listing-step-3 .no-ogn {
   padding-top: 7rem;
-  background: url(images/ogn-icon-horiz.svg) no-repeat;
+  background: var(--golden-rod-light) url(images/ogn-icon-horiz.svg) no-repeat;
   background-position: center 2rem;
   margin-bottom: 1rem;
 }
@@ -2941,34 +3120,102 @@ footer .copyright {
   justify-content: space-between;
 }
 
-.create-listing-step-1 {
+.create-listing .create-listing-calendar .step-description {
+  font-size: 28px;
+}
+
+.create-listing .create-listing-calendar .gray-box {
+  margin-top: 10.5rem;
+}
+
+.create-listing .create-listing-calendar {
+  border: transparent;
+}
+
+.create-listing .availability-editor .action-buttons > .btn:first-child {
+  margin-right: 1rem;
+}
+
+.create-listing .availability-editor .action-buttons > .btn {
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.create-listing .availability-editor .action-buttons {
+  display: flex;
+}
+
+.create-listing .availability-editor label {
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+
+.create-listing .availability-editor .sep {
+  padding: 0 0.5rem;
+  align-self: center;
+  font-weight: bold;
+}
+
+.create-listing .availability-editor .inline-label label {
+  margin-bottom: 0;
+  margin-right: 1rem;
+}
+
+.create-listing .availability-editor .inline-label > div input {
+  margin-right: 0.25rem;
+}
+
+.create-listing .availability-editor .inline-label > div {
+  margin-left: 1rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.create-listing .availability-editor .inline-label {
+  display: flex;
+  align-items: center;
+}
+
+.create-listing .availability-editor {
+  margin-top: 10.5rem;
+  border: 1px solid var(--light);
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.create-listing .create-listing-step-1 {
   max-width: 570px;
 }
 
-.create-listing-step-1 > .wrap {
+.create-listing .create-listing-step-1 > .wrap {
   max-width: 460px;
 }
 
-.create-listing-step-1 h2 {
+.create-listing .create-listing-step-1 h2 {
   font-family: Poppins;
   font-size: 40px;
   font-weight: 200;
 }
 
-.create-listing-step-1 .category.inactive {
+.create-listing .create-listing-step-1 .category.inactive {
   cursor: pointer;
 }
 
-.create-listing-step-1 .category.inactive:hover {
+.create-listing .create-listing-step-1 .category.inactive:hover {
   background-color: var(--pale-grey-eight);
 }
 
-.create-listing-step-1 .category.active {
+.create-listing .create-listing-step-1 .category.active {
   color: var(--dark);
   border-color: #000;
 }
 
-.create-listing-step-1 .category .title::before {
+.create-listing .create-listing-step-1 .category .title::before {
   content: "";
   background-repeat: no-repeat;
   background-size: contain;
@@ -2977,38 +3224,38 @@ footer .copyright {
   height: 5rem;
 }
 
-.create-listing-step-1 .category .title {
+.create-listing .create-listing-step-1 .category .title {
   display: flex;
   align-items: center;
   margin: 0.5rem 0;
 }
 
-.create-listing-step-1 .category.forSale .title::before {
+.create-listing .create-listing-step-1 .category.forSale .title::before {
   background-image: url(images/create-listing/for-sale.svg);
   background-position: 1rem;
 }
 
-.create-listing-step-1 .category.forRent .title::before {
+.create-listing .create-listing-step-1 .category.forRent .title::before {
   background-image: url(images/create-listing/for-rent.svg);
   background-position: 1.9rem;
 }
 
-.create-listing-step-1 .category.services .title::before {
+.create-listing .create-listing-step-1 .category.services .title::before {
   background-image: url(images/create-listing/services.svg);
   background-position: 2rem;
 }
 
-.create-listing-step-1 .category.announcements .title::before {
+.create-listing .create-listing-step-1 .category.announcements .title::before {
   background-image: url(images/create-listing/annoucements.svg);
   background-position: 1rem;
   background-size: 4rem;
 }
 
-.create-listing-step-1 .category .sub-cat {
+.create-listing .create-listing-step-1 .category .sub-cat {
   padding: 0.5rem 1rem 1rem 1rem;
 }
 
-.create-listing-step-1 .category {
+.create-listing .create-listing-step-1 .category {
   border: 1px solid var(--light);
   font-size: 24px;
   font-weight: normal;
@@ -3017,16 +3264,7 @@ footer .copyright {
   border-radius: 5px;
 }
 
-.create-listing-step-1 .actions .btn {
-  min-width: 10rem;
-  border-radius: 2rem;
-  padding: 0.625rem;
-  font-size: 18px;
-}
-
-.create-listing-step-1 .actions {
-  margin-top: 2rem;
-  display: flex;
+.create-listing .create-listing-step-1 .actions {
   justify-content: flex-end;
 }
 
