@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="Content-Language" content="en">
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="app.054c6149.css" />
+    <link rel="stylesheet" href="app.14f58803.css" />
   </head>
   <body><div id="app"><div class="loading-screen"></div></div></body>
   <!-- <script crossorigin src="vendor/openpgp.min.js"></script>
@@ -21,5 +21,17 @@
     localStorage.ognNetwork = "rinkeby"
     localStorage.metaMaskEnabled = "true"
   </script>
-  <script src="app.054c6149.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106384880-2"></script>
+  <script>
+    var hostname = window.location.hostname
+    window.dataLayer = window.dataLayer || []
+    if (window.gtag == undefined) {
+      function gtag(){ dataLayer.push(arguments) }
+    }
+    if (hostname !== 'localhost' && hostname !== '0.0.0.0') {
+      gtag('js', new Date());
+      gtag('config', 'UA-106384880-2');
+    }
+  </script>
+  <script src="app.14f58803.js"></script>
 </html>
