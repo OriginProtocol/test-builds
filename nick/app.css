@@ -1126,6 +1126,26 @@
   border: 1px solid var(--light);
   border-radius: 5px;
   padding: 1rem;
+  display: flex;
+}
+
+.tx-listing-detail .main-pic {
+  width: 200px;
+  min-height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-right: 1rem;
+}
+
+.tx-listing-detail .category {
+  font-size: 14px;
+}
+
+.tx-listing-detail .fiat {
+  display: inline-block;
+  margin-left: 0.75rem;
+  font-size: 14px;
 }
 
 .transaction-progress {
@@ -3756,7 +3776,8 @@ footer .copyright {
   font-weight: bold;
 }
 
-.notifications .count .total {
+.nav-item.notifications .count .total,
+.nav-item.messages .count .total {
   background: var(--greenblue);
   color: var(--white);
   min-width: 1.6rem;
@@ -3767,12 +3788,15 @@ footer .copyright {
   text-align: center;
 }
 
-.notifications .count .title {
+.nav-item.notifications .count .title,
+.nav-item.messages .count .title {
   margin-left: 1.1rem;
 }
 
-.notifications .count {
+.nav-item.notifications .count,
+.nav-item.messages .count {
   display: flex;
+  white-space: nowrap;
   align-items: center;
   padding: 0.85rem 1.25rem;
   font-size: 18px;
@@ -3780,7 +3804,8 @@ footer .copyright {
   border-bottom: 1px solid var(--light);
 }
 
-.notifications .dropdown-menu > a {
+.nav-item.notifications .dropdown-menu > a,
+.nav-item.messages .dropdown-menu > a {
   background: var(--pale-grey-two);
   font-size: 18px;
   text-align: center;
@@ -3789,7 +3814,7 @@ footer .copyright {
   border-radius: 0 0 5px 5px;
 }
 
-.notifications .notification-row {
+.nav-item.notifications .notification-row {
   max-width: 540px;
 }
 
@@ -3821,7 +3846,7 @@ footer .copyright {
   background-image: url(images/alerts-icon-selected.svg);
 }
 
-.navbar .nav-item .messages-icon.active::after {
+.navbar .nav-item.messages .messages-icon.active::after {
   content: "";
   width: 14px;
   height: 14px;
@@ -3833,7 +3858,7 @@ footer .copyright {
   right: -3px;
 }
 
-.navbar .nav-item .messages-icon {
+.navbar .nav-item.messages .messages-icon {
   width: 2.2rem;
   height: 1.6rem;
   background: url(images/messages-icon.svg) no-repeat center;
@@ -3841,12 +3866,8 @@ footer .copyright {
   position: relative;
 }
 
-.navbar .nav-item.show .messages-icon {
+.navbar .nav-item.messages.show .messages-icon {
   background-image: url(images/messages-icon-selected.svg);
-}
-
-.navbar .nav-item .dropdown-menu.messages {
-  padding: 1rem;
 }
 
 .listing-detail {
@@ -4044,18 +4065,8 @@ footer .copyright {
 
 .send-message .form-control {
   margin-right: 1rem;
-}
-
-.send-message textarea {
-  background-color: transparent;
   border: 0;
-  padding: 10px 0 0;
-  resize: none;
   outline: none;
-  -ms-flex-grow: 1;
-  -moz-flex-grow: 1;
-  -webkit-flex-grow: 1;
-  flex-grow: 1;
 }
 
 .send-message button {
@@ -4106,6 +4117,102 @@ footer .copyright {
   -moz-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+}
+
+.room-status {
+  padding: 0.75rem;
+  display: flex;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.room-status.active .time {
+  color: var(--white);
+}
+
+.room-status.active {
+  background: var(--dusk);
+  color: var(--white);
+}
+
+.room-status .avatar {
+  align-self: flex-start;
+  -ms-flex: 0 0 40px;
+  -moz-flex: 0 0 40px;
+  -webkit-flex: 0 0 40px;
+  flex: 0 0 40px;
+}
+
+.room-status .right .top .name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.room-status .right .top .time {
+  color: var(--bluey-grey);
+  font-size: 12px;
+  font-weight: normal;
+  margin-left: 0.25rem;
+}
+
+.room-status .right .top {
+  display: flex;
+  align-items: center;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.room-status .right .bottom .last-message {
+  line-height: normal;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.room-status .right .bottom .unread {
+  font-weight: bold;
+  border-radius: 1rem;
+  background-color: var(--clear-blue);
+  color: white;
+  padding: 0 0.5rem;
+  margin-left: 0.25rem;
+}
+
+.room-status .right .bottom {
+  display: flex;
+  align-items: flex-start;
+  font-size: 12px;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.room-status .right {
+  display: flex;
+  margin-left: 0.5rem;
+  min-width: 0;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
 .messages-page .messages {
@@ -4186,7 +4293,7 @@ footer .copyright {
 
 .messages-page .messages .message .bubble {
   display: inline-block;
-  margin-left: 1.5rem;
+  margin-left: 1.75rem;
   padding: 1rem;
   background-color: var(--pale-grey);
   border-radius: 1rem;
@@ -4212,7 +4319,6 @@ footer .copyright {
   background-color: var(--clear-blue);
   color: var(--white);
   margin-right: 1.5rem;
-  margin-left: 0;
 }
 
 .messages-page .messages .message.user {
@@ -4229,76 +4335,6 @@ footer .copyright {
 
 .messages-page {
   margin-top: 1rem;
-}
-
-.messages-page .room.active .time {
-  color: var(--white);
-}
-
-.messages-page .room.active {
-  background: var(--dusk);
-  color: var(--white);
-}
-
-.messages-page .room .avatar {
-  align-self: flex-start;
-  -ms-flex: 0 0 40px;
-  -moz-flex: 0 0 40px;
-  -webkit-flex: 0 0 40px;
-  flex: 0 0 40px;
-}
-
-.messages-page .room .right .top .name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: bold;
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.messages-page .room .right .top .time {
-  color: var(--bluey-grey);
-  font-size: 12px;
-}
-
-.messages-page .room .right .top {
-  display: flex;
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.messages-page .room .right .last-message {
-  line-height: normal;
-  font-size: 12px;
-  font-weight: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.messages-page .room .right {
-  display: flex;
-  margin-left: 0.5rem;
-  min-width: 0;
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.messages-page .room {
-  padding: 0.75rem;
-  display: flex;
-  cursor: pointer;
-  font-size: 16px;
 }
 
 .notification-row {
