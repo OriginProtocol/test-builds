@@ -274,6 +274,16 @@
   flex: 1;
 }
 
+.loading-spinner {
+  background: url(images/spinner-animation-dark.svg) no-repeat center;
+  background-size: cover;
+  position: fixed;
+  top: calc(50% - 1.5rem);
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 3rem;
+}
+
 .eth-address {
   word-break: break-all;
   line-height: normal;
@@ -1875,7 +1885,6 @@ footer .copyright {
 }
 
 .attestation-modal > div .actions .btn-link {
-  margin-top: 1rem;
   text-decoration: none;
 }
 
@@ -1883,10 +1892,10 @@ footer .copyright {
   display: flex;
   align-items: center;
   margin-top: 1.5rem;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
+  -ms-flex-direction: column !important;
+  -moz-flex-direction: column !important;
+  -webkit-flex-direction: column !important;
+  flex-direction: column !important;
 }
 
 .attestation-modal > div {
