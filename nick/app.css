@@ -1,6 +1,6 @@
 .about-party {
   background: var(--pale-grey-eight);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem;
   font-size: 14px;
   font-weight: normal;
@@ -97,7 +97,7 @@
   width: 100%;
   padding-top: 100%;
   background-size: contain;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -384,13 +384,14 @@
   margin-left: 1rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .gallery .thumbnails .inner > div {
     width: 75px;
     height: 50px;
   }
 
   .gallery .thumbnails .inner {
+    justify-content: center;
     -ms-flex-direction: row;
     -moz-flex-direction: row;
     -webkit-flex-direction: row;
@@ -499,7 +500,7 @@
   background-color: var(--dark);
   margin-bottom: 2rem;
   padding: 1rem;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   word-break: break-all;
   font-size: 14px;
 }
@@ -785,7 +786,7 @@
 .calendar .month-chooser {
   display: flex;
   justify-content: space-between;
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 300;
 }
@@ -1062,7 +1063,7 @@
 }
 
 .pl-modal-content h5 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 22px;
   font-weight: normal;
 }
@@ -1075,7 +1076,7 @@
   margin-top: 2rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .pl-modal .pl-modal-table .pl-modal-cell .pl-modal-content .actions {
     display: flex;
     align-items: center;
@@ -1092,7 +1093,7 @@
 
 .offer-details {
   background: var(--pale-grey-eight);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   font-size: 18px;
   font-weight: normal;
   padding: 1rem 1.5rem;
@@ -1168,7 +1169,7 @@
 }
 
 .transaction-detail > h2 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 40px;
   font-weight: 200;
   color: var(--dark);
@@ -1176,22 +1177,24 @@
 }
 
 .transaction-detail h3 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-weight: 300;
   font-size: 24px;
 }
 
-.transaction-detail h4.side-bar.mt-4 {
+.transaction-detail .side-bar h3.mt-4 {
   margin-top: 1.5rem;
 }
 
-.transaction-detail h4.side-bar {
-  font-family: Poppins;
-  font-weight: 300;
+.transaction-detail .side-bar h3 {
   font-size: 18px;
 }
 
-@media (max-width: 575.98px) {
+.transaction-detail .about-party {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
   .transaction-detail > h2 {
     font-size: 32px;
   }
@@ -1291,7 +1294,7 @@
 
 .tx-listing-detail {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem;
   display: flex;
   margin-bottom: 2rem;
@@ -1318,7 +1321,7 @@
 
 .transaction-progress {
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding-top: 1.5rem;
   display: flex;
   align-items: center;
@@ -1367,7 +1370,7 @@
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 0;
-  font-family: Lato;
+  font-family: var(--default-font);
 }
 
 .transaction-progress .next-step {
@@ -1507,7 +1510,7 @@
   position: relative;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .transaction-progress .actions {
     -ms-flex-direction: column-reverse;
     -moz-flex-direction: column-reverse;
@@ -1659,7 +1662,7 @@ footer .copyright {
   margin-top: 1rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   footer .container .about {
     margin-right: 0;
   }
@@ -1706,14 +1709,6 @@ footer .copyright {
   align-items: stretch;
 }
 
-.navbar .nav-item.show .nav-link:hover.text span {
-  background-color: initial;
-}
-
-.navbar .nav-item.show .nav-link:hover {
-  background-color: initial;
-}
-
 .navbar .nav-item.show .nav-link {
   color: var(--dark);
 }
@@ -1724,14 +1719,6 @@ footer .copyright {
 
 .navbar .nav-item.dark.show {
   background-color: var(--dark);
-}
-
-.navbar .nav-item .nav-link:hover.text span {
-  background-color: var(--dark-grey-blue);
-}
-
-.navbar .nav-item .nav-link:hover {
-  background-color: var(--dark-grey-blue);
 }
 
 .navbar .nav-item .nav-link.text span:hover,
@@ -1802,17 +1789,16 @@ footer .copyright {
   position: absolute !important;
   margin-top: 1rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  border-radius: 5px 0 5px 5px;
+  border-radius: var(--default-radius) 0 5px 5px;
   border: 0;
   font-weight: normal;
-  border-radius: 5px 0 5px 5px;
+  border-radius: var(--default-radius) 0 5px 5px;
 }
 
 .navbar .nav-item {
   display: flex;
   align-items: center;
   min-height: 3.75rem;
-  font-family: Lato;
   font-size: 14px;
   font-weight: bold;
   font-style: normal;
@@ -1825,7 +1811,25 @@ footer .copyright {
   text-indent: -9999px;
 }
 
-@media (max-width: 575.98px) {
+@media (pointer: fine) {
+  .navbar .nav-item.show .nav-link:hover.text span {
+    background-color: initial;
+  }
+
+  .navbar .nav-item.show .nav-link:hover {
+    background-color: initial;
+  }
+
+  .navbar .nav-item .nav-link:hover.text span {
+    background-color: var(--dark-grey-blue);
+  }
+
+  .navbar .nav-item .nav-link:hover {
+    background-color: var(--dark-grey-blue);
+  }
+}
+
+@media (max-width: 767.98px) {
   .navbar .nav-item .dropdown-menu {
     left: 1rem;
     right: 1rem;
@@ -2004,7 +2008,7 @@ footer .copyright {
 .country-code {
   cursor: pointer;
   background-color: var(--dark-two);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 0.5rem;
   margin-right: 0.5rem;
   display: flex;
@@ -2129,7 +2133,7 @@ footer .copyright {
 }
 
 .listing-card .category {
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 14px;
   color: var(--dusk);
   font-weight: normal;
@@ -2142,7 +2146,7 @@ footer .copyright {
 }
 
 .listing-card h5 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 300;
   color: var(--dark);
@@ -2169,18 +2173,18 @@ footer .copyright {
   background: url(images/eth-icon.svg) no-repeat;
   padding-left: 2rem;
   line-height: 1.25rem;
-  font-family: Lato;
+  font-family: var(--default-font);
 }
 
 .listings-count {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 40px;
   font-weight: 200;
   color: var(--dark);
   margin-top: 3rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .listings-count {
     margin: 1rem 0 0 0;
     font-size: 32px;
@@ -2214,6 +2218,7 @@ footer .copyright {
   padding: 0.375rem 0.5rem;
   font-size: 14px;
   font-weight: bold;
+  line-height: 1;
 }
 
 .beta-banner.lg .container {
@@ -2258,7 +2263,7 @@ footer .copyright {
 
 .profile-edit .gray-box {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem;
   margin-bottom: 2rem;
 }
@@ -2303,7 +2308,7 @@ footer .copyright {
   padding-top: 8rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .profile-edit .avatar-wrap {
     margin-right: 1rem;
   }
@@ -2445,7 +2450,7 @@ footer .copyright {
 }
 
 .onboard .onboard-box .no-funds h5 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 200;
 }
@@ -2453,7 +2458,7 @@ footer .copyright {
 .onboard .onboard-box .no-funds {
   background-color: rgba(244, 193, 16, 0.1);
   border: 1px solid var(--golden-rod);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 2rem 2rem 2rem 5rem;
   position: relative;
 }
@@ -2614,7 +2619,7 @@ footer .copyright {
 .profile-attestations .profile-attestation {
   padding: 0.75rem 1rem;
   border: 1px dashed var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   display: flex;
   position: relative;
   font-size: 18px;
@@ -2649,7 +2654,7 @@ footer .copyright {
 }
 
 .onboard h2 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 40px;
   font-weight: 200;
   font-style: normal;
@@ -2662,7 +2667,7 @@ footer .copyright {
 }
 
 .onboard .step {
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 14px;
   color: var(--dusk);
   font-weight: normal;
@@ -2671,7 +2676,7 @@ footer .copyright {
 }
 
 .onboard h3 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 28px;
   font-weight: 300;
   font-style: normal;
@@ -2693,7 +2698,7 @@ footer .copyright {
 .onboard .listing-preview,
 .onboard .onboard-help {
   background: var(--pale-grey-eight);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem;
   margin-bottom: 2rem;
   font-size: 16px;
@@ -2724,7 +2729,7 @@ footer .copyright {
 
 .onboard-box {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 8rem 2rem;
   display: flex;
   align-items: center;
@@ -2746,7 +2751,7 @@ footer .copyright {
 }
 
 .onboard-box .status {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 300;
   margin: 2rem 0 0.5rem 0;
@@ -2885,7 +2890,7 @@ footer .copyright {
 }
 
 .onboard .connect h4 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 300;
 }
@@ -2902,7 +2907,7 @@ footer .copyright {
 
 .onboard .connect {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 2rem;
   margin-bottom: 1.5rem;
   display: flex;
@@ -2958,7 +2963,7 @@ footer .copyright {
   justify-content: center;
   font-weight: 800;
   font-size: 4rem;
-  font-family: poppins;
+  font-family: var(--heading-font);
 }
 
 .notifications-modal .btn-success {
@@ -3035,7 +3040,7 @@ footer .copyright {
 
 .purchases .purchase {
   border: 1px solid var(--pale-grey-two);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 0.5rem;
   display: flex;
   margin-bottom: 1rem;
@@ -3204,13 +3209,13 @@ footer .copyright {
 }
 
 .create-listing .gray-box {
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 2rem;
   background-color: var(--pale-grey-eight);
 }
 
 .create-listing .step {
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 14px;
   color: var(--dusk);
   font-weight: normal;
@@ -3219,7 +3224,7 @@ footer .copyright {
 }
 
 .create-listing .step-description {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 24px;
   font-weight: 300;
   line-height: normal;
@@ -3238,7 +3243,7 @@ footer .copyright {
   justify-content: space-between;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .create-listing .actions .btn:first-child {
     margin-left: 0;
   }
@@ -3292,7 +3297,7 @@ footer .copyright {
 .create-listing .create-listing-step-3 .no-ogn {
   padding: 2rem;
   border: 1px solid var(--golden-rod);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   text-align: center;
   background-color: var(--golden-rod-light);
 }
@@ -3473,7 +3478,7 @@ footer .copyright {
 
 .create-listing .create-listing-review .detail {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem 2rem;
   font-size: 18px;
   font-weight: normal;
@@ -3499,7 +3504,7 @@ footer .copyright {
   grid-template-columns: repeat(auto-fill,minmax(90px, 1fr));
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .create-listing .create-listing-review .detail {
     padding: 1rem;
   }
@@ -3567,7 +3572,7 @@ footer .copyright {
 .create-listing .availability-editor {
   margin-top: 10.5rem;
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 1rem;
   font-size: 18px;
   font-weight: normal;
@@ -3582,7 +3587,7 @@ footer .copyright {
 }
 
 .create-listing .create-listing-step-1 h2 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 40px;
   font-weight: 200;
   line-height: 1.25;
@@ -3647,14 +3652,14 @@ footer .copyright {
   font-weight: normal;
   color: var(--dark);
   margin-bottom: 0.75rem;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
 }
 
 .create-listing .create-listing-step-1 .actions {
   justify-content: flex-end;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .create-listing .create-listing-step-1 h2 {
     font-size: 32px;
     line-height: 1.25;
@@ -3785,7 +3790,7 @@ footer .copyright {
   border-radius: 0 5px 5px 5px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .navbar .nav-item.mobile .dropdown-menu::before {
     content: none;
   }
@@ -3824,7 +3829,7 @@ footer .copyright {
   background: var(--greenblue);
   width: 10px;
   height: 10px;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   margin-right: 4px;
   margin-left: 6px;
 }
@@ -3945,7 +3950,7 @@ footer .copyright {
   background-image: url(images/identity/google-icon-verified.svg);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .dropdown-menu.profile {
     width: auto;
   }
@@ -4026,7 +4031,7 @@ footer .copyright {
   font-size: 18px;
   color: #000;
   font-weight: bold;
-  border-radius: 5px 0 0 0;
+  border-radius: var(--default-radius) 0 0 0;
   white-space: nowrap;
 }
 
@@ -4102,7 +4107,7 @@ footer .copyright {
 }
 
 .nav-item.sell .dropdown-menu .dropdown-item:first-child {
-  border-radius: 5px 5px 0 0;
+  border-radius: var(--default-radius) 5px 0 0;
 }
 
 .nav-item.sell .dropdown-menu .dropdown-item:last-child {
@@ -4215,7 +4220,7 @@ footer .copyright {
 }
 
 .listing-detail h2 {
-  font-family: Poppins;
+  font-family: var(--heading-font);
   font-size: 40px;
   font-weight: 200;
   font-style: normal;
@@ -4229,7 +4234,7 @@ footer .copyright {
 }
 
 .listing-detail .category {
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 14px;
   color: var(--dusk);
   font-weight: normal;
@@ -4262,7 +4267,7 @@ footer .copyright {
 .listing-detail .listing-buy .quantity,
 .listing-detail .listing-buy .total {
   padding: 1rem;
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 18px;
   font-weight: normal;
   display: flex;
@@ -4282,7 +4287,7 @@ footer .copyright {
   background-size: 1.5rem;
   padding: 0.2rem 0 1.5rem 2rem;
   line-height: 1rem;
-  font-family: Lato;
+  font-family: var(--default-font);
   font-size: 24px;
   font-weight: bold;
   font-style: normal;
@@ -4300,7 +4305,7 @@ footer .copyright {
 
 .listing-detail .listing-buy.fractional .choose-dates div:nth-child(1),
 .listing-detail .listing-buy.fractional .choose-dates div:nth-child(3) {
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   padding: 0 5px;
   cursor: pointer;
 }
@@ -4348,11 +4353,11 @@ footer .copyright {
 
 .listing-detail .listing-buy {
   padding: 1.5rem;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   background-color: var(--pale-grey-eight);
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .listing-detail h2 {
     font-size: 32px;
   }
@@ -4411,7 +4416,7 @@ footer .copyright {
   margin-top: 1rem;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .make-offer-modal .btn {
     margin-top: 1rem;
   }
@@ -4771,7 +4776,7 @@ footer .copyright {
 
 .notifications-list {
   border: 1px solid var(--light);
-  border-radius: 5px;
+  border-radius: var(--default-radius);
 }
 
 .app-error {
@@ -4794,7 +4799,7 @@ footer .copyright {
 
 .translation-article {
   padding: 1.5rem;
-  border-radius: 5px;
+  border-radius: var(--default-radius);
   font-size: 18px;
   line-height: normal;
   font-weight: normal;
