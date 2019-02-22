@@ -1627,6 +1627,10 @@ footer .about {
   flex: 1;
 }
 
+footer .logo-box {
+  text-align: center;
+}
+
 footer .logo {
   background: url(images/origin-logo-footer.svg) no-repeat;
   height: 25px;
@@ -1671,17 +1675,8 @@ footer .copyright {
     margin-bottom: 1rem;
   }
 
-  footer .container .links a {
-    margin: 0;
-  }
-
   footer .container .links {
     align-items: center;
-    margin-top: 1rem;
-    -ms-flex-direction: column;
-    -moz-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
   }
 
   footer .container {
@@ -1697,6 +1692,21 @@ footer .copyright {
     margin-top: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer .container .links a {
+    margin: 0;
+  }
+
+  footer .container .links {
+    align-items: left;
+    margin-top: 1rem;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -1809,6 +1819,15 @@ footer .copyright {
   background: url(images/origin-logo.svg) no-repeat center;
   width: 90px;
   text-indent: -9999px;
+}
+
+.custom-brand {
+  padding-top: 0.4125rem;
+  padding-bottom: 0.4125rem;
+}
+
+.custom-brand img {
+  max-height: 2.8rem;
 }
 
 @media (pointer: fine) {
@@ -2182,6 +2201,10 @@ footer .copyright {
   font-weight: 200;
   color: var(--dark);
   margin-top: 3rem;
+}
+
+.listings-empty {
+  margin-top: 10rem;
 }
 
 @media (max-width: 767.98px) {
@@ -4745,6 +4768,66 @@ footer .copyright {
   margin-top: 1rem;
 }
 
+.messages-page .back .avatar {
+  margin-right: 10px;
+  margin-left: auto;
+  align-self: center;
+  display: inline-block;
+  vertical-align: text-bottom;
+}
+
+.messages-page .back .avatar-container {
+  height: 30px;
+  width: 30px;
+}
+
+.messages-page .back i.icon-arrow-left {
+  margin-left: 18px;
+  margin-top: 20px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.messages-page .back i {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.messages-page .back .counterparty {
+  margin-right: auto;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  width: 200px;
+  text-align: left;
+  line-height: 57px;
+}
+
+.messages-page .back a {
+  color: white;
+}
+
+.messages-page .back:hover {
+  color: white;
+}
+
+.messages-page .back {
+  background-color: var(--dusk);
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: -16px;
+}
+
 .notification-row {
   display: flex;
   cursor: pointer;
@@ -4817,7 +4900,7 @@ footer .copyright {
   border-radius: var(--default-radius);
 }
 
-.app-error {
+.app-spinner {
   position: fixed;
   top: 50%;
   left: 50%;
