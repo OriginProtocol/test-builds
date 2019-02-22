@@ -4769,11 +4769,10 @@ footer .copyright {
 }
 
 .messages-page .back .avatar {
-  margin-right: 10px;
-  margin-left: auto;
+  margin: 0 10px 12px auto;
   align-self: center;
   display: inline-block;
-  vertical-align: text-bottom;
+  vertical-align: bottom;
 }
 
 .messages-page .back .avatar-container {
