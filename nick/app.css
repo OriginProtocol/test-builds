@@ -1091,6 +1091,37 @@
   }
 }
 
+.multirange {
+  position: relative;
+  width: 100%;
+}
+
+.multirange input {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
+
+.multirange input:nth-child(1)::-webkit-slider-thumb {
+  z-index: 2;
+  position: relative;
+}
+
+.multirange input:nth-child(1) {
+  position: absolute;
+}
+
+.multirange input:nth-child(2)::-webkit-slider-runnable-track {
+  background: var(--track-background);
+}
+
+.multirange input:nth-child(2) {
+  position: relative;
+  --track-background: linear-gradient(to right, transparent calc(var(--low) + 3px), var(--steel) 0, var(--steel) calc(var(--high) - 3px), transparent 0) no-repeat 0 45% / 100% 40%;
+}
+
 .offer-details {
   background: var(--pale-grey-eight);
   border-radius: var(--default-radius);
@@ -1340,7 +1371,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
   z-index: 10;
 }
 
@@ -2080,42 +2111,103 @@ footer .copyright {
   background-color: var(--dark-two);
 }
 
+.btn-filter {
+  border: 1px solid #455d75;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--dark);
+  padding: 0.125rem 0.5rem;
+}
+
+.price-filter {
+  min-width: 14rem;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: var(--pale-grey-three);
+  padding: 0;
+}
+
+.price-filter .dropdown-content {
+  padding: 0.75rem 1rem;
+}
+
+.price-filter .prices {
+  display: flex;
+  justify-content: space-between;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 0.25rem;
+}
+
+.price-filter .actions button:first-child {
+  border-left-width: 0;
+  -ms-border-bottom-left-radius: 5px;
+  -moz-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.price-filter .actions button:last-child {
+  -ms-border-bottom-right-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.price-filter .actions button {
+  padding: 0.5rem;
+  background: var(--pale-grey-two);
+  border-style: solid;
+  border-color: var(--light);
+  border-width: 1px 0 0 1px;
+  color: var(--clear-blue);
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.price-filter .actions {
+  display: flex;
+}
+
 .search-bar {
   padding: 0.7rem 0;
   box-shadow: 0 1px 0 0 var(--light);
   background-color: var(--pale-grey);
 }
 
-.search-bar .input-group {
-  max-width: 520px;
-}
-
-.search-bar .btn-outline-secondary {
+.search-bar .input-group.search-query .btn-outline-secondary {
   border: 1px solid var(--light);
   font-size: 14px;
   font-weight: normal;
   color: var(--dusk);
 }
 
-.search-bar .dropdown-toggle::after {
+.search-bar .input-group.search-query .dropdown-toggle::after {
   margin-left: 0.5rem;
 }
 
-.search-bar .form-control::placeholder {
+.search-bar .input-group.search-query .form-control::placeholder {
   opacity: 0.5;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: alpha(opacity=50);
 }
 
-.search-bar .form-control {
+.search-bar .input-group.search-query .form-control {
   border-color: var(--light);
 }
 
-.search-bar .btn-primary {
+.search-bar .input-group.search-query .btn-primary {
   background: var(--dusk) url(images/magnifying-glass.svg) no-repeat center;
   border-color: var(--dusk);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.search-bar .input-group.search-query {
+  max-width: 520px;
 }
 
 .listing-card {
@@ -4450,6 +4542,139 @@ footer .copyright {
   }
 }
 
+.message {
+  margin: 10px 0 20px 0;
+  width: 100%;
+  -ms-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -webkit-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.message .message-container {
+  max-width: 70%;
+}
+
+.message .avatar-container .avatar {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.message .avatar-container {
+  display: inline;
+}
+
+.message.content-only {
+  margin-bottom: 0;
+}
+
+.message.counterparty.content-only {
+  margin-left: 60px;
+}
+
+.message.counterparty .account,
+.message.counterparty .name {
+  color: var(--dark-blue-grey);
+}
+
+.message.user.content-only {
+  margin-right: 60px;
+}
+
+.message.user .account,
+.message.user .name {
+  color: white;
+}
+
+.message .bubble .top .name {
+  font-weight: normal;
+  margin-right: 0.5rem;
+}
+
+.message .bubble .top .account {
+  max-width: 6rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message .bubble .top {
+  font-size: 14px;
+  display: flex;
+}
+
+.message .bubble .content .image-container {
+  overflow: auto;
+}
+
+.message .bubble .content {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.message .bubble.tail::after {
+  content: '';
+  bottom: 8px;
+  left: -34px;
+  position: absolute;
+  border: 0px solid;
+  display: block;
+  width: 38px;
+  height: 26px;
+  background-color: transparent;
+  box-shadow: 10px 11px 0px -3px var(--pale-grey);
+  -ms-border-bottom-left-radius: 50%;
+  -moz-border-bottom-left-radius: 50%;
+  -webkit-border-bottom-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -ms-border-bottom-right-radius: 50%;
+  -moz-border-bottom-right-radius: 50%;
+  -webkit-border-bottom-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -ms-transform: rotate(-42deg);
+  -moz-transform: rotate(-42deg);
+  -webkit-transform: rotate(-42deg);
+  transform: rotate(-42deg);
+}
+
+.message .bubble {
+  display: inline-block;
+  margin-left: 1.75rem;
+  padding: 1rem;
+  background-color: var(--pale-grey);
+  border-radius: 1rem;
+  position: relative;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.message.user .bubble.tail::after {
+  right: -34px;
+  left: auto;
+  box-shadow: -10px 11px 0px -3px var(--clear-blue);
+  -ms-transform: rotate(42deg);
+  -moz-transform: rotate(42deg);
+  -webkit-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+
+.message.user .bubble {
+  background-color: var(--clear-blue);
+  color: var(--white);
+  margin-right: 1.5rem;
+}
+
+.message.user {
+  align-self: flex-end;
+  -ms-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
 .send-message {
   border-top: 1px solid var(--pale-grey);
   padding-top: 1rem;
@@ -4631,103 +4856,67 @@ footer .copyright {
   margin-bottom: 1rem;
 }
 
-.messages-page .messages .message .avatar {
-  height: 60px;
-  width: 60px;
+.messages-page {
+  margin-top: 1rem;
+}
+
+.messages-page .back .avatar {
+  margin: 0 10px 12px auto;
+  align-self: center;
   display: inline-block;
   vertical-align: bottom;
 }
 
-.messages-page .messages .message .bubble .top .name {
-  font-weight: normal;
-  margin-right: 0.5rem;
+.messages-page .back .avatar-container {
+  height: 30px;
+  width: 30px;
 }
 
-.messages-page .messages .message .bubble .top .account {
-  max-width: 6rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.messages-page .back i.icon-arrow-left {
+  margin-left: 18px;
+  margin-top: 20px;
+  -webkit-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 
-.messages-page .messages .message .bubble .top {
-  font-size: 14px;
-  display: flex;
-}
-
-.messages-page .messages .message .bubble .content {
-  font-weight: normal;
-  font-size: 16px;
-}
-
-.messages-page .messages .message .bubble::after {
-  content: '';
-  bottom: 8px;
-  left: -34px;
-  position: absolute;
-  border: 0px solid;
-  display: block;
-  width: 38px;
-  height: 26px;
-  background-color: transparent;
-  box-shadow: 10px 11px 0px -3px var(--pale-grey);
-  -ms-border-bottom-left-radius: 50%;
-  -moz-border-bottom-left-radius: 50%;
-  -webkit-border-bottom-left-radius: 50%;
-  border-bottom-left-radius: 50%;
-  -ms-border-bottom-right-radius: 50%;
-  -moz-border-bottom-right-radius: 50%;
-  -webkit-border-bottom-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  -ms-transform: rotate(-42deg);
-  -moz-transform: rotate(-42deg);
-  -webkit-transform: rotate(-42deg);
-  transform: rotate(-42deg);
-}
-
-.messages-page .messages .message .bubble {
+.messages-page .back i {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
   display: inline-block;
-  margin-left: 1.75rem;
-  padding: 1rem;
-  background-color: var(--pale-grey);
-  border-radius: 1rem;
-  position: relative;
-  max-width: 70%;
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+  padding: 3px;
 }
 
-.messages-page .messages .message.user .bubble::after {
-  right: -34px;
-  left: auto;
-  box-shadow: -10px 11px 0px -3px var(--clear-blue);
-  -ms-transform: rotate(42deg);
-  -moz-transform: rotate(42deg);
-  -webkit-transform: rotate(42deg);
-  transform: rotate(42deg);
+.messages-page .back .counterparty {
+  margin-right: auto;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  width: 200px;
+  text-align: left;
+  line-height: 57px;
 }
 
-.messages-page .messages .message.user .bubble {
-  background-color: var(--clear-blue);
-  color: var(--white);
-  margin-right: 1.5rem;
+.messages-page .back a {
+  color: white;
 }
 
-.messages-page .messages .message.user {
-  align-self: flex-end;
-  -ms-flex-direction: row-reverse;
-  -moz-flex-direction: row-reverse;
-  -webkit-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+.messages-page .back:hover {
+  color: white;
 }
 
-.messages-page .messages .message {
-  margin: 20px 0;
-}
-
-.messages-page {
-  margin-top: 1rem;
+.messages-page .back {
+  background-color: var(--dusk);
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: -16px;
 }
 
 .notification-row {
