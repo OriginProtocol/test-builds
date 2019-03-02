@@ -1,10 +1,13 @@
 .about-party {
   background: var(--pale-grey-eight);
   border-radius: var(--default-radius);
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
   font-size: 14px;
   font-weight: normal;
-  cursor: pointer;
+}
+
+.about-party .profile .user-detail {
+  min-width: 0;
 }
 
 .about-party .profile .avatar {
@@ -16,11 +19,15 @@
   font-weight: bold;
   line-height: 1.25rem;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .about-party .profile {
   display: flex;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .about-party .eth-address > img {
@@ -33,6 +40,27 @@
 
 .about-party .eth-address {
   display: flex;
+}
+
+.about-party .actions {
+  margin: 1rem -0.25rem 0 -0.25rem;
+  display: flex;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.about-party .btn-rounded {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  white-space: nowrap;
+  margin: 0 0.25rem 0.5rem 0.25rem;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 .segments {
@@ -257,6 +285,10 @@
   }
 }
 
+.message-modal textarea {
+  min-height: 6rem;
+}
+
 .message-modal .to {
   white-space: nowrap;
   overflow: hidden;
@@ -468,6 +500,10 @@
   margin-left: 0.25rem;
 }
 
+.balances .account .balance .coin.ogn > span {
+  color: #007bff;
+}
+
 .balances .account .balance .coin {
   font-size: 24px;
   line-height: 24px;
@@ -499,21 +535,27 @@
   color: var(--white);
   background-color: var(--dark);
   margin-bottom: 2rem;
-  padding: 1rem;
   border-radius: var(--default-radius);
   word-break: break-all;
   font-size: 14px;
 }
 
+.wallet .wallet-info a {
+  color: var(--white);
+}
+
 .wallet .wallet-info .identicon {
-  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   display: flex;
   align-items: center;
 }
 
 .wallet .wallet-info {
+  padding: 1rem 1.5rem;
   display: flex;
   font-size: 14px;
+  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
   -ms-flex-direction: row;
   -moz-flex-direction: row;
   -webkit-flex-direction: row;
@@ -522,12 +564,11 @@
 
 .wallet h5 {
   font-size: 14px;
+  color: var(--light);
 }
 
 .wallet .balances {
-  border-top: 1px solid var(--steel);
-  margin-top: 1rem;
-  padding-top: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .image-picker {
@@ -820,6 +861,105 @@
 
 .coin-price.ogn {
   background-image: url(images/ogn-icon.svg);
+}
+
+.enable-messaging {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.enable-messaging .status.mb {
+  margin-bottom: 4rem;
+}
+
+.enable-messaging .status i {
+  font-size: 20px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.enable-messaging .status {
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 300;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.enable-messaging .help.mb {
+  margin-bottom: 2rem;
+}
+
+.enable-messaging em {
+  font-weight: normal;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.enable-messaging a.cancel.big {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.enable-messaging a.cancel {
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 1rem;
+}
+
+.enable-messaging .qm::after {
+  content: "?";
+}
+
+.enable-messaging .qm:nth-child(2) {
+  right: 0.25rem;
+}
+
+.enable-messaging .qm.active::after {
+  content: "";
+}
+
+.enable-messaging .qm.active {
+  background: var(--greenblue) url(images/checkmark-white.svg) no-repeat center;
+  background-size: 1.2rem;
+}
+
+.enable-messaging .qm.error::after {
+  content: "×";
+}
+
+.enable-messaging .qm.error {
+  background: var(--orange-red);
+  font-size: 2.2rem;
+  line-height: 1.8rem;
+}
+
+.enable-messaging .qm {
+  width: 2rem;
+  height: 2rem;
+  background: var(--golden-rod);
+  position: absolute;
+  border-radius: 2rem;
+  bottom: -0.75rem;
+  right: -2rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.enable-messaging .messaging-logo {
+  margin-bottom: 1rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 1rem;
+  background: var(--dusk) url(images/messages-icon.svg) no-repeat center;
+  background-size: 3.5rem;
+  position: relative;
 }
 
 .pl-modal-open {
@@ -1629,6 +1769,30 @@
   font-weight: normal;
 }
 
+.settings {
+  padding-top: 3rem;
+}
+
+.settings-box {
+  margin-bottom: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--light);
+  border-radius: var(--default-radius);
+}
+
+.settings .form-text small {
+  font-size: 70%;
+}
+
+.settings .form-text {
+  margin-top: -0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.settings .form-group {
+  margin-bottom: 1.5rem;
+}
+
 footer {
   border-top: 1px solid var(--pale-grey-two);
   background-color: #f4f6f7;
@@ -1899,6 +2063,11 @@ footer .copyright {
   background-size: 11rem;
   padding-top: 10rem;
   font-size: 16px;
+}
+
+.beta-modal a {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 .beta-modal h5 {
@@ -2178,6 +2347,12 @@ footer .copyright {
   background-color: var(--pale-grey);
 }
 
+.search-bar .input-group.search-query .btn-outline-secondary:hover,
+.search-bar .input-group.search-query .btn-outline-secondary:active,
+.search-bar .input-group.search-query .btn-outline-secondary:focus {
+  color: var(--white);
+}
+
 .search-bar .input-group.search-query .btn-outline-secondary {
   border: 1px solid var(--light);
   font-size: 14px;
@@ -2214,7 +2389,7 @@ footer .copyright {
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 2rem;
   margin-top: 1rem;
   cursor: pointer;
@@ -2247,13 +2422,19 @@ footer .copyright {
   font-family: var(--default-font);
   font-size: 14px;
   color: var(--dusk);
-  font-weight: normal;
   text-transform: uppercase;
   margin-top: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .listing-card .badge {
   margin-top: 0.75rem;
+}
+
+.listing-card h5 a {
+  color: var(--dark);
 }
 
 .listing-card h5 {
@@ -2301,7 +2482,7 @@ footer .copyright {
 
 @media (max-width: 767.98px) {
   .listings-count {
-    margin: 1rem 0 0 0;
+    margin: 2rem 0 0 0;
     font-size: 32px;
   }
 }
@@ -2951,6 +3132,16 @@ footer .copyright {
   height: 3.5rem;
 }
 
+@media (max-width: 767.98px) {
+  .onboard h2 {
+    line-height: 1.25;
+  }
+
+  .onboard {
+    margin: 2rem 0 0 0;
+  }
+}
+
 .onboard .onboard-box .metamask-logo {
   background: url(images/metamask.svg) no-repeat center;
   background-size: 7rem;
@@ -3293,6 +3484,31 @@ footer .copyright {
   margin-right: 6px;
 }
 
+.growth-campaigns .action .requirement {
+  padding-right: 10px;
+  height: 28px;
+  background-color: var(--pale-grey);
+  border-radius: 52px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--clear-blue);
+}
+
+.growth-campaigns .action .requirement .value {
+  padding-bottom: 1px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.growth-campaigns .action .requirement img {
+  margin-right: 6px;
+}
+
+.growth-campaigns .action .emphasis {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .growth-campaigns .action img {
   width: 19px;
 }
@@ -3527,10 +3743,15 @@ footer .copyright {
 }
 
 .purchases .purchase .details {
+  display: flex;
   -ms-flex: 1;
   -moz-flex: 1;
   -webkit-flex: 1;
   flex: 1;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
 .purchases .purchase .top > .category {
@@ -3567,6 +3788,19 @@ footer .copyright {
 .purchases .purchase .price {
   font-weight: normal;
   margin-top: 0.5rem;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.purchases .purchase .actions > a {
+  margin-right: 1rem;
+}
+
+.purchases .purchase .actions {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 .purchases .purchase {
@@ -3594,6 +3828,7 @@ footer .copyright {
 
 .create-listing .create-listing-step-2 .form-control.is-invalid {
   border-color: #dc3545;
+  background-image: none;
 }
 
 .create-listing .create-listing-step-2 .form-control::-webkit-input-placeholder {
@@ -3655,6 +3890,10 @@ footer .copyright {
 .create-listing .create-listing-step-2 .help-text.price {
   color: var(--bluey-grey);
   margin-top: 0.5rem;
+}
+
+.create-listing .create-listing-step-2 .help-text.photo-help {
+  font-weight: 300;
 }
 
 .create-listing .create-listing-step-2 .help-text {
@@ -4434,6 +4673,11 @@ footer .copyright {
   font-weight: bold;
 }
 
+.dropdown-menu.profile > a.unlink-wallet {
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
 .dropdown-menu.profile > a {
   display: block;
   background: var(--dark-grey-blue);
@@ -4750,6 +4994,14 @@ footer .copyright {
   margin-left: 1.5rem;
 }
 
+.navbar .nav-item.messages .count.title {
+  margin-right: auto;
+}
+
+.navbar .nav-item.messages .messaging-dropdown-content {
+  max-width: 450px;
+}
+
 .listing-detail {
   margin-top: 2.5rem;
 }
@@ -4782,19 +5034,25 @@ footer .copyright {
   margin-top: 0.75rem;
 }
 
+.listing-detail .gallery {
+  margin-bottom: 1rem;
+}
+
 .listing-detail .main-pic {
   padding-top: 56.6%;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top center;
+  border: 1px solid var(--pale-grey-two);
 }
 
 .listing-detail .description {
   white-space: pre-wrap;
 }
 
-.listing-detail .gallery {
-  margin-bottom: 2rem;
+.listing-detail .availability-help {
+  font-size: 14px;
+  margin-bottom: 1rem;
 }
 
 .listing-detail .listing-buy > .btn {
@@ -4844,10 +5102,17 @@ footer .copyright {
   display: flex;
   align-items: baseline;
   margin-bottom: 1.5rem;
+  white-space: nowrap;
+  -ms-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .listing-detail .listing-buy.multi .price {
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--light);
+  margin-bottom: 0;
 }
 
 .listing-detail .listing-buy.fractional .choose-dates div:nth-child(1):hover,
@@ -5009,7 +5274,7 @@ footer .copyright {
 }
 
 .message.counterparty.content-only {
-  margin-left: 60px;
+  padding-left: 60px;
 }
 
 .message.counterparty .account,
@@ -5018,7 +5283,7 @@ footer .copyright {
 }
 
 .message.user.content-only {
-  margin-right: 60px;
+  padding-right: 60px;
 }
 
 .message.user .account,
