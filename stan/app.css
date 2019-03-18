@@ -6211,7 +6211,7 @@ footer .copyright {
 .message .bubble .content {
   font-weight: normal;
   font-size: 16px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .message .bubble.tail::after {
