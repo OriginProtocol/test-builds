@@ -462,6 +462,88 @@
   font-weight: normal;
 }
 
+.currency-select-dropdown {
+  z-index: 1;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  font-weight: bold;
+  font-size: 14px;
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.currency-select-dropdown span i:before,
+.currency-select-dropdown span i:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 6px solid transparent;
+}
+
+.currency-select-dropdown span i:before {
+  top: 0;
+  border-top-color: var(--steel);
+}
+
+.currency-select-dropdown span i:after {
+  top: -3px;
+  border-top-color: var(--pale-grey);
+}
+
+.currency-select-dropdown span i {
+  position: relative;
+  display: inline-block;
+  height: 12px;
+  vertical-align: -4px;
+  margin: 0 8px 0 2px;
+}
+
+.currency-select-dropdown span:hover i:before {
+  border-top-color: var(--pale-grey);
+}
+
+.currency-select-dropdown span:hover i:after {
+  border-top-color: var(--steel);
+}
+
+.currency-select-dropdown span::before {
+  content: attr(data-content);
+  margin-right: 0.25rem;
+  background-color: var(--steel);
+  color: var(--white);
+  width: 18px;
+  display: inline-block;
+  border-radius: 1rem;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.currency-select-dropdown span:hover::before {
+  background-color: var(--white);
+  color: var(--steel);
+}
+
+.currency-select-dropdown span:hover {
+  background-color: var(--steel);
+  color: var(--white);
+}
+
+.currency-select-dropdown span {
+  padding: 4px 12px 4px 12px;
+  border-radius: 16px;
+  background: var(--pale-grey);
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  background-size: 17px;
+  color: var(--steel);
+}
+
 .gallery {
   display: flex;
   -ms-flex-direction: row;
@@ -687,6 +769,68 @@
   margin-top: 0.75rem;
 }
 
+.growth-campaign-box .enroll-gray-box {
+  border: 1px solid var(--light);
+  border-radius: var(--default-radius);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.growth-campaign-box .enroll-gray-box.pointer {
+  cursor: pointer;
+}
+
+.growth-campaign-box .campaign-enroll {
+  font-size: 14px;
+  background: url(images/growth/token-stack.svg) no-repeat center 1.5rem;
+  background-size: 7rem;
+  padding-top: 8rem;
+}
+
+.growth-campaign-box .btn-enroll {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--clear-blue);
+  border: 0px;
+}
+
+.growth-campaign-box .ogn-icon {
+  position: relative;
+  top: -3px;
+}
+
+.growth-campaign-box .ogn-amount {
+  color: var(--clear-blue);
+}
+
+.growth-campaign-box .title {
+  font-weight: normal;
+  color: var(--dark);
+  font-size: 14px;
+}
+
+.growth-campaign-box .small {
+  font-size: 10px;
+}
+
+.growth-campaign-box .big {
+  font-size: 24px;
+}
+
+.growth-campaign-box .small-dark {
+  font-size: 10px;
+  color: var(--dark);
+  margin-top: 7px;
+  font-weight: normal;
+}
+
+.growth-campaign-box .small-steel {
+  font-size: 10px;
+  margin-top: 7px;
+  color: var(--steel);
+  font-weight: normal;
+}
+
 .image-cropper {
   cursor: pointer;
   display: block;
@@ -835,6 +979,44 @@
   background: var(--white);
   cursor: pointer;
   border: 2px dashed transparent;
+}
+
+.blue-progress-bar-holder .indicators {
+  font-size: 10px;
+  color: #455d75;
+}
+
+.blue-progress-bar-holder .blue-progress-bar .background {
+  background-color: var(--pale-grey-two);
+  border-radius: 5px;
+  border: 1px solid #c2cbd3;
+  height: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.blue-progress-bar-holder .blue-progress-bar .foreground {
+  background-color: var(--clear-blue);
+  border: 1px solid var(--greenblue);
+  border-radius: 5px;
+  height: 100%;
+  z-index: 2;
+  position: relative;
+  -webkit-transition: width 0.5s;
+  -ms-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.blue-progress-bar-holder .blue-progress-bar {
+  height: 10px;
+  width: 100%;
+  position: relative;
 }
 
 .calendar {
@@ -3592,20 +3774,20 @@ footer .copyright {
   cursor: pointer;
 }
 
-.growth-invite .navigation-list  .select-bar {
+.growth-invite .navigation-list .select-bar {
   background-color: var(--clear-blue);
   height: 4px;
   width: 100%;
 }
 
-.growth-invite .navigation-list  .title {
+.growth-invite .navigation-list .title {
   font-size: 0.88rem;
   line-height: 1.93;
   color: var(--bluey-grey);
   font-weight: normal;
 }
 
-.growth-invite .navigation-list  .title.active {
+.growth-invite .navigation-list .title.active {
   color: var(--dark);
 }
 
@@ -3918,44 +4100,6 @@ footer .copyright {
   width: 28px;
 }
 
-.growth-campaigns .indicators {
-  font-size: 10px;
-  color: #455d75;
-}
-
-.growth-campaigns .campaign-progress .background {
-  background-color: var(--pale-grey-two);
-  border-radius: 5px;
-  border: 1px solid #c2cbd3;
-  height: 10px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.growth-campaigns .campaign-progress .foreground {
-  background-color: var(--clear-blue);
-  border: 1px solid var(--greenblue);
-  border-radius: 5px;
-  height: 100%;
-  z-index: 2;
-  position: relative;
-  -webkit-transition: width 0.5s;
-  -ms-transition: width 0.5s;
-  -moz-transition: width 0.5s;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
-.growth-campaigns .campaign-progress {
-  height: 10px;
-  width: 100%;
-  position: relative;
-}
-
 .growth-campaigns .ogn-amount {
   color: var(--clear-blue);
 }
@@ -4142,14 +4286,26 @@ footer .copyright {
   font-weight: 300;
 }
 
+.growth-enrollment-modal .pale-grey {
+  color: var(--pale-grey);
+}
+
+.growth-enrollment-modal .explanation {
+  font-size: 12px;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+  line-height: 1.58;
+}
+
 .growth-enrollment-modal .terms {
-  font-size: 14px;
+  font-size: 12px;
   overflow-y: scroll;
-  height: 250px;
+  height: 150px;
   background-color: var(--dark-two);
   margin: 24px 0px;
   text-align: left;
-  padding: 22px 31px 15px 22px;
+  padding: 18px 25px 18px 25px;
   font-weight: 300;
 }
 
@@ -4225,7 +4381,7 @@ footer .copyright {
 .growth-welcome .infographics {
   background-color: #f1f6f9;
   border-radius: 5px;
-  height: 317px;
+  height: 350px;
 }
 
 .growth-welcome .personalised-holder {
@@ -5044,6 +5200,40 @@ footer .copyright {
   transform: translateY(-50%);
 }
 
+.with-symbol > span > i:before,
+.with-symbol > span > i:after {
+  position: absolute;
+  display: block;
+  content: "";
+  border: 6px solid transparent;
+}
+
+.with-symbol > span > i:before {
+  top: 0;
+  border-top-color: var(--steel);
+}
+
+.with-symbol > span > i:after {
+  top: -3px;
+  border-top-color: var(--pale-grey);
+}
+
+.with-symbol > span > i {
+  position: relative;
+  display: inline-block;
+  height: 12px;
+  vertical-align: -4px;
+  margin: 0 8px 0 2px;
+}
+
+.with-symbol > span:hover > i:before {
+  border-top-color: var(--pale-grey);
+}
+
+.with-symbol > span:hover > i:after {
+  border-top-color: var(--steel);
+}
+
 .with-symbol > span.eth {
   padding-left: 1.75rem;
   color: var(--bluish-purple);
@@ -5059,14 +5249,38 @@ footer .copyright {
 .with-symbol > span.usd::before {
   content: "$";
   margin-right: 0.25rem;
+  background-color: var(--steel);
+  color: var(--white);
+  width: 18px;
+  display: inline-block;
+  border-radius: 1rem;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.with-symbol > span.usd:hover::before {
+  background-color: var(--white);
+  color: var(--steel);
+}
+
+.with-symbol > span.usd:hover {
+  background-color: var(--steel);
+  color: var(--white);
+}
+
+.with-symbol > span.usd {
+  color: var(--steel);
 }
 
 .with-symbol > span {
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 50%;
-  padding: 2px 9px 2px 9px;
-  border-radius: 12px;
+  padding: 4px 12px 4px 12px;
+  border-radius: 16px;
   background: var(--pale-grey);
   background-repeat: no-repeat;
   background-position: 6px center;
@@ -5834,6 +6048,13 @@ svg.help-icon:hover path {
 .listing-detail .listing-buy .price span.desc {
   font-weight: normal;
   margin-left: 0.25rem;
+}
+
+.listing-detail .listing-buy .price .orig {
+  color: var(--steel);
+  font-weight: normal;
+  margin-left: 1rem;
+  font-size: 16px;
 }
 
 .listing-detail .listing-buy .price {
