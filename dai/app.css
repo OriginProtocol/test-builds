@@ -446,6 +446,220 @@
   flex: 1;
 }
 
+.weekCalendar {
+  margin-bottom: 2rem;
+}
+
+.weekCalendar.calendar-sm .days > .day {
+  height: auto;
+}
+
+.weekCalendar .slots > .empty.first-row {
+  border-bottom: 1px solid #c2cbd3;
+}
+
+.weekCalendar .slots > .time-column-label > div {
+  margin-top: -1rem;
+}
+
+.weekCalendar .slots > .time-column-label {
+  border-style: solid;
+  border-color: #c2cbd3;
+  border-width: 0 1px 0 0;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.weekCalendar .slots > .hour.end-row {
+  border-right-width: 1px;
+}
+
+.weekCalendar .slots > .hour.in-past,
+.weekCalendar .slots > .hour.unavailable {
+  background-color: var(--pale-grey);
+}
+
+.weekCalendar .slots > .hour.nonWorkingHour {
+  background-color: var(--pale-grey);
+}
+
+.weekCalendar .slots > .hour.unavailable div:nth-child(1),
+.weekCalendar .slots > .hournonWorkingHour div:nth-child(1) {
+  color: var(--light);
+}
+
+.weekCalendar .slots > .hour > div:nth-child(2) {
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.weekCalendar .slots > .hour::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+}
+
+.weekCalendar .slots > .hour.active::after {
+  cursor: pointer;
+}
+
+.weekCalendar .slots > .hour.active.unselected:hover::after {
+  border: 3px solid black;
+}
+
+.weekCalendar .slots > .hour.start,
+.weekCalendar .slots > .hour.mid,
+.weekCalendar .slots > .hour.end {
+  background-color: var(--pale-clear-blue);
+}
+
+.weekCalendar .slots > .hour.start::after {
+  border-width: 3px 3px 0 3px;
+  border-color: black;
+}
+
+.weekCalendar .slots > .hour.mid::after {
+  border-width: 0 3px 0px 3px;
+  border-color: black;
+}
+
+.weekCalendar .slots > .hour.end::after {
+  border-width: 0 3px 3px 3px;
+  border-color: black;
+}
+
+.weekCalendar .slots > .hour.single::after {
+  border-width: 3px;
+  border-color: black;
+}
+
+.weekCalendar .slots > .hour.nbb::after {
+  border-bottom-color: transparent;
+}
+
+.weekCalendar .slots > .hour.nbt::after {
+  border-top-color: transparent;
+}
+
+.weekCalendar .slots > .hour {
+  height: 50px;
+  min-height: 3.5rem;
+  color: #455d75;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  min-width: 0;
+  border-style: solid;
+  border-color: #c2cbd3;
+  border-width: 0 0 1px 1px;
+  position: relative;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.weekCalendar .slots.inactive > div:hover.start::after,
+.weekCalendar .slots.inactive > div:hover.end::after,
+.weekCalendar .slots.inactive > div:hover.mid::after {
+  border-color: blue;
+  border-width: 3px;
+  z-index: 3;
+}
+
+.weekCalendar .slots {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  grid-auto-flow: column;
+  border-style: solid;
+  border-color: #c2cbd3;
+  border-width: 1px 1px 1px 1px;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.weekCalendar .day-header > div .day-column-name {
+  text-transform: uppercase;
+}
+
+.weekCalendar .day-header > div .day-column-number {
+  font-size: 24px;
+  color: var(--dark);
+}
+
+.weekCalendar .day-header > div {
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.weekCalendar .day-header {
+  display: flex;
+  border-width: 0 0 0 0;
+  border-style: solid;
+  border-color: #c2cbd3;
+  justify-content: space-between;
+  text-align: left;
+  padding-left: 1rem;
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--bluey-grey);
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+
+.weekCalendar .week-chooser .btn::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  border-width: 0 0 1px 1px;
+  border-color: #979797;
+  border-style: solid;
+  display: inline-block;
+  -ms-transform: rotate(45deg) translate(3px, -1px);
+  -moz-transform: rotate(45deg) translate(3px, -1px);
+  -webkit-transform: rotate(45deg) translate(3px, -1px);
+  transform: rotate(45deg) translate(3px, -1px);
+}
+
+.weekCalendar .week-chooser .btn.next::before {
+  -ms-transform: rotate(225deg) translate(1px, -2px);
+  -moz-transform: rotate(225deg) translate(1px, -2px);
+  -webkit-transform: rotate(225deg) translate(1px, -2px);
+  transform: rotate(225deg) translate(1px, -2px);
+}
+
+.weekCalendar .week-chooser .btn:hover::before {
+  border-color: var(--white);
+}
+
+.weekCalendar .week-chooser .btn {
+  border-color: #c2cbd3;
+}
+
+.weekCalendar .week-chooser {
+  display: flex;
+  justify-content: space-between;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 300;
+}
+
 .loading-spinner {
   background: url(images/spinner-animation-dark.svg) no-repeat center;
   background-size: cover;
@@ -463,17 +677,11 @@
 }
 
 .currency-select-dropdown {
-  z-index: 1;
-  cursor: pointer;
   position: absolute;
   right: 10px;
-  top: 50%;
+  top: 12px;
   font-weight: bold;
   font-size: 14px;
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .currency-select-dropdown span i:before,
@@ -502,11 +710,11 @@
   margin: 0 8px 0 2px;
 }
 
-.currency-select-dropdown span:hover i:before {
+.currency-select-dropdown span.hover:hover i:before {
   border-top-color: var(--pale-grey);
 }
 
-.currency-select-dropdown span:hover i:after {
+.currency-select-dropdown span.hover:hover i:after {
   border-top-color: var(--steel);
 }
 
@@ -524,12 +732,13 @@
   font-size: 14px;
 }
 
-.currency-select-dropdown span:hover::before {
+.currency-select-dropdown span.hover:hover::before {
   background-color: var(--white);
   color: var(--steel);
 }
 
-.currency-select-dropdown span:hover {
+.currency-select-dropdown span.hover:hover {
+  cursor: pointer;
   background-color: var(--steel);
   color: var(--white);
 }
@@ -5168,131 +5377,6 @@ footer .copyright {
   position: relative;
 }
 
-.with-symbol.corner::before {
-  content: '';
-  position: absolute;
-  left: -8px;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-top: 9px solid transparent;
-  border-right: 9px solid var(--light);
-  border-bottom: 9px solid transparent;
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.with-symbol.corner::after {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-top: 7px solid transparent;
-  border-right: 7px solid #e9ecef;
-  border-bottom: 7px solid transparent;
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.with-symbol > span > i:before,
-.with-symbol > span > i:after {
-  position: absolute;
-  display: block;
-  content: "";
-  border: 6px solid transparent;
-}
-
-.with-symbol > span > i:before {
-  top: 0;
-  border-top-color: var(--steel);
-}
-
-.with-symbol > span > i:after {
-  top: -3px;
-  border-top-color: var(--pale-grey);
-}
-
-.with-symbol > span > i {
-  position: relative;
-  display: inline-block;
-  height: 12px;
-  vertical-align: -4px;
-  margin: 0 8px 0 2px;
-}
-
-.with-symbol > span:hover > i:before {
-  border-top-color: var(--pale-grey);
-}
-
-.with-symbol > span:hover > i:after {
-  border-top-color: var(--steel);
-}
-
-.with-symbol > span.eth {
-  padding-left: 1.75rem;
-  color: var(--bluish-purple);
-  background-image: url(images/eth-icon.svg);
-}
-
-.with-symbol > span.ogn {
-  padding-left: 1.75rem;
-  color: var(--clear-blue);
-  background-image: url(images/ogn-icon.svg);
-}
-
-.with-symbol > span.usd::before {
-  content: "$";
-  margin-right: 0.25rem;
-  background-color: var(--steel);
-  color: var(--white);
-  width: 18px;
-  display: inline-block;
-  border-radius: 1rem;
-  line-height: 18px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.with-symbol > span.usd:hover::before {
-  background-color: var(--white);
-  color: var(--steel);
-}
-
-.with-symbol > span.usd:hover {
-  background-color: var(--steel);
-  color: var(--white);
-}
-
-.with-symbol > span.usd {
-  color: var(--steel);
-}
-
-.with-symbol > span {
-  cursor: pointer;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  padding: 4px 12px 4px 12px;
-  border-radius: 16px;
-  background: var(--pale-grey);
-  background-repeat: no-repeat;
-  background-position: 6px center;
-  background-size: 17px;
-  font-weight: bold;
-  font-size: 14px;
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
 .create-listing .create-listing-step-2 .pricing-chooser {
   border: solid 1px var(--light);
   background-color: #f4f6f7;
@@ -6014,6 +6098,11 @@ svg.help-icon:hover path {
   white-space: pre-wrap;
 }
 
+.listing-detail .timeZone {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
 .listing-detail .availability-help {
   font-size: 14px;
   margin-bottom: 1rem;
@@ -6342,7 +6431,7 @@ svg.help-icon:hover path {
 .message .bubble .content {
   font-weight: normal;
   font-size: 16px;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .message .bubble.tail::after {
