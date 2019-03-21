@@ -5,7 +5,7 @@ This repo is served at https://originprotocol.github.io/test-builds/
 To add your own test dapp build, follow these steps:
 
 1. Change to parent directory of the origin monorepo
-2. `git clone git@github.com:OriginProtocol/test-builds.git`
+2. `git clone https://github.com/OriginProtocol/test-builds.git`
 3. Build you dapp: `cd origin/dapps/marketplace && npm run build`
 4. Change to test-build repo: `cd ../../../test-builds`
 5. Copy build: `./copy-build.sh [your-name]`
