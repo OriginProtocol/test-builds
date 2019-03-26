@@ -2081,6 +2081,14 @@
   flex-direction: column;
 }
 
+.transaction-progress.view-only .stages {
+  margin-top: 0;
+}
+
+.transaction-progress.view-only {
+  padding-top: 0;
+}
+
 .transaction-progress.loading::before {
   content: "";
   position: absolute;
@@ -2324,9 +2332,9 @@ footer .logo-box {
 }
 
 footer .logo {
-  background: url(images/origin-logo-footer.svg) no-repeat;
+  background: url(images/origin-beta-logo-dark.svg) no-repeat;
   height: 25px;
-  width: 100px;
+  width: 120px;
 }
 
 footer .separator {
@@ -2354,8 +2362,21 @@ footer .links {
   flex-wrap: wrap;
 }
 
+footer .about a {
+  color: var(--clear-blue);
+}
+
+footer .about {
+  font-size: 12px;
+}
+
+footer .copyright span {
+  color: var(--pale-grey-two-darker);
+}
+
 footer .copyright {
   margin-top: 1rem;
+  font-size: 10px;
 }
 
 @media (max-width: 767.98px) {
@@ -2508,8 +2529,8 @@ footer .copyright {
 }
 
 .navbar-brand {
-  background: url(images/origin-logo.svg) no-repeat center;
-  width: 90px;
+  background: url(images/origin-beta-logo-white.svg) no-repeat center;
+  width: 108px;
   text-indent: -9999px;
 }
 
@@ -2601,6 +2622,48 @@ footer .copyright {
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+
+.rewards-banner {
+  background-color: var(--clear-blue);
+  height: 85px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid var(--dark-two);
+}
+
+.rewards-banner img {
+  margin: 0 20px 10px 0;
+}
+
+.rewards-banner strong {
+  top: 5px;
+}
+
+.rewards-banner .text {
+  margin-top: 5px;
+}
+
+.rewards-banner .btn:hover {
+  background-color: var(--dark-blue-grey);
+  color: var(--white);
+}
+
+.rewards-banner .btn {
+  background-color: var(--dark-grey-blue);
+  color: var(--white) !important;
+  margin-top: 12px;
+  width: 96px;
+  color: var(--dark-grey-blue);
+  border-radius: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .rewards-banner .text {
+    margin-top: 18px;
+  }
 }
 
 .attestation-modal {
@@ -2980,72 +3043,6 @@ footer .copyright {
   }
 }
 
-.beta-banner {
-  background: #fff8de;
-  font-size: 18px;
-  font-weight: normal;
-  border-bottom: 1px solid var(--dusk);
-}
-
-.beta-banner.sm .container {
-  padding-right: 0;
-}
-
-.beta-banner.sm .badge {
-  margin-right: 0.5rem;
-  padding: 0.2rem 0.25rem;
-}
-
-.beta-banner.sm > a {
-  padding: 0 0.25rem;
-  color: #000;
-  display: block;
-  margin-left: auto;
-}
-
-.beta-banner.sm {
-  padding: 0.375rem 0.5rem;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.beta-banner.lg .container {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-}
-
-.beta-banner .container > div:nth-child(1) {
-  margin-right: 1rem;
-}
-
-.beta-banner .container > div:nth-child(2) > div:nth-child(1) {
-  font-weight: 700;
-}
-
-.beta-banner .container > div:nth-child(2) {
-  -ms-flex: 1;
-  -moz-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-
-.beta-banner .container a.close-banner:hover {
-  background: gray;
-  color: white;
-}
-
-.beta-banner .container a.close-banner {
-  display: inline-block;
-  margin-left: auto;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  border-radius: 1rem;
-  font-weight: 700;
-  color: var(--dark);
-}
-
 .profile-edit {
   margin-top: 3rem;
 }
@@ -3255,6 +3252,14 @@ footer .copyright {
 
 .about-info table.config-table {
   margin-bottom: 1.5rem;
+}
+
+.lead-text {
+  padding: 30px 0 5px 0;
+}
+
+.about-info img {
+  max-width: 400px;
 }
 
 .lead-text {
@@ -4476,12 +4481,15 @@ footer .copyright {
 }
 
 .growth-enrollment-modal .checkbox-holder {
+  color: var(--pale-grey);
+  font-family: Lato;
+  font-weight: normal;
   display: block;
   position: relative;
   padding-left: 28px;
   margin-bottom: 0px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4531,20 +4539,54 @@ footer .copyright {
 }
 
 .growth-welcome {
-  margin-top: 100px;
+  background-color: #131d27;
+}
+
+.growth-welcome .top-padding {
+  padding-top: 60px;
 }
 
 .growth-welcome .logo {
   width: 118px;
 }
 
+.growth-welcome .enroll-button {
+  margin-bottom: 134px;
+}
+
 .growth-welcome .title-text {
   margin-top: 40px;
   margin-bottom: 16px;
   font-family: Poppins;
-  font-size: 50px;
-  font-weight: 200;
-  line-height: 1.3;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.27;
+  color: white;
+}
+
+.growth-welcome .sub-title {
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  line-height: 1.38;
+  color: white;
+}
+
+.growth-welcome .invited-by {
+  color: white;
+  font-weight: normal;
+}
+
+.growth-welcome .spaceman.center {
+  background-position: center left;
+}
+
+.growth-welcome .spaceman {
+  background-image: url(images/growth/spaceman.svg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  margin-left: -100px;
+  padding-left: 100px;
 }
 
 .growth-welcome .btn {
@@ -4555,82 +4597,241 @@ footer .copyright {
   font-weight: 900;
 }
 
-.growth-welcome .info-title {
-  font-size: 28px;
-  font-family: Poppins;
-  font-weight: bold;
-  text-align: center;
-}
-
-.growth-welcome .token-stack-holder {
-  position: relative;
-}
-
-.growth-welcome .token-stack {
-  width: 440px;
-}
-
-.growth-welcome .free-badge {
-  position: absolute;
-  width: 168px;
-  right: 15px;
-  bottom: 35px;
-}
-
-.growth-welcome .infographics .title {
-  text-align: center;
-  font-weight: bold;
-}
-
-.growth-welcome .infographics .text {
-  text-align: center;
-  font-size: 14px;
-}
-
-.growth-welcome .infographics {
-  background-color: #f1f6f9;
-  border-radius: 5px;
-  height: 350px;
-}
-
-.growth-welcome .personalised-holder {
-  position: absolute;
-  right: 0;
-}
-
-.growth-welcome .message-bubble {
-  padding: 10px 20px;
-  background-color: var(--pale-grey-eight);
-  height: 77px;
-  border-radius: 45px;
-  border: solid 2px var(--white);
-}
-
-.growth-welcome .triangle {
-  width: 0;
-  height: 0;
-  border-left: 23px solid transparent;
-  border-right: 23px solid transparent;
-  border-top: 23px solid var(--pale-grey-eight);
-  margin-top: -16px;
-  -ms-transform: rotate(225deg);
-  -moz-transform: rotate(225deg);
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
-}
-
-.growth-welcome .profile-holder {
+.growth-welcome .personalised-bar .profile-holder {
   background-color: var(--dark-grey-blue);
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 75px;
-  border: solid 2px var(--pale-grey-eight);
   overflow: hidden;
 }
 
-.growth-welcome .referrer {
+.growth-welcome .personalised-bar .profile-holder img {
   margin-top: 20px;
-  margin-right: 10px;
+}
+
+.growth-welcome .personalised-bar {
+  margin-top: 64px;
+}
+
+.growth-welcome .second-fold-holder .left-column {
+  padding-bottom: 75px;
+}
+
+.growth-welcome .second-fold-holder .container {
+  padding-top: 73px;
+}
+
+.growth-welcome .second-fold-holder .title {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+
+.growth-welcome .second-fold-holder .sub-title {
+  font-weight: normal;
+  color: var(--dusk);
+  padding-right: 100px;
+}
+
+.growth-welcome .second-fold-holder .sub-title.mobile {
+  padding-right: 0px;
+}
+
+.growth-welcome .second-fold-holder .feature-row {
+  margin-top: 50px;
+  padding-left: 6px;
+}
+
+.growth-welcome .second-fold-holder .feature-text {
+  margin-left: 27px;
+  margin-right: 55px;
+  font-weight: bold;
+}
+
+.growth-welcome .second-fold-holder {
+  background-color: white;
+  font-family: Lato;
+  font-color: var(--dark);
+}
+
+.growth-welcome .third-fold-holder .container {
+  max-width: 650px;
+}
+
+.growth-welcome .third-fold-holder .title {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: Poppins;
+}
+
+.growth-welcome .third-fold-holder .sub-title {
+  font-weight: normal;
+  color: var(--dusk);
+  line-height: normal;
+}
+
+.growth-welcome .third-fold-holder .text {
+  font-size: 12px;
+  font-weight: normal;
+  font-family: Lato;
+  color: var(--dusk);
+  line-height: normal;
+}
+
+.growth-welcome .third-fold-holder .btn {
+  font-size: 18px;
+  width: 200px;
+  height: 50px;
+}
+
+.growth-welcome .third-fold-holder {
+  background-color: var(--pale-grey-eight);
+  padding-bottom: 145px;
+  padding-top: 145px;
+  text-align: center;
+}
+
+.growth-welcome .fourth-fold-holder .coin-section {
+  background-color: var(--clear-blue);
+  height: 340px;
+  width: 100%;
+  background-image: url(images/growth/reward-ogn-coins.svg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+.growth-welcome .fourth-fold-holder .boosting-section .text-holder {
+  max-width: 350px;
+}
+
+.growth-welcome .fourth-fold-holder .boosting-section .title {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.14;
+  color: var(--dark);
+}
+
+.growth-welcome .fourth-fold-holder .boosting-section .text {
+  font-family: Lato;
+  font-weight: normal;
+  line-height: 1.44;
+  color: var(--dark);
+}
+
+.growth-welcome .fourth-fold-holder .boosting-section {
+  background-color: var(--pale-grey-eight);
+  height: 500px;
+  padding-top: 150px;
+  padding-right: 135px;
+}
+
+.growth-welcome .fourth-fold-holder .boosting-section.mobile {
+  padding-top: 50px;
+  padding-right: 35px;
+}
+
+.growth-welcome .fourth-fold-holder .arrows-section {
+  background-color: #5f41d2;
+  height: 340px;
+  width: 100%;
+  background-image: url(images/growth/purple-up-arrow.svg);
+  background-position: bottom left;
+  background-repeat: repeat;
+}
+
+.growth-welcome .fourth-fold-holder .rewards-section .text-holder {
+  max-width: 350px;
+}
+
+.growth-welcome .fourth-fold-holder .rewards-section .title {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.14;
+  color: white;
+}
+
+.growth-welcome .fourth-fold-holder .rewards-section .text {
+  font-family: Lato;
+  font-weight: normal;
+  line-height: 1.44;
+  color: white;
+}
+
+.growth-welcome .fourth-fold-holder .rewards-section {
+  background-color: var(--dark-grey-blue);
+  height: 500px;
+  padding-top: 150px;
+  padding-left: 135px;
+}
+
+.growth-welcome .fourth-fold-holder .rewards-section.mobile {
+  padding-top: 50px;
+  padding-left: 35px;
+}
+
+.growth-welcome .start-earning-fold-holder .title {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.growth-welcome .start-earning-fold-holder .text {
+  font-family: Lato;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.growth-welcome .start-earning-fold-holder .number-point {
+  font-family: Lato;
+  font-weight: normal;
+  border: solid 1px var(--white);
+  border-radius: 50px;
+  width: 46px;
+  height: 46px;
+  margin-top: 42px;
+}
+
+.growth-welcome .start-earning-fold-holder .btn {
+  font-size: 18px;
+  min-width: 200px;
+  width: auto;
+  height: 50px;
+  border: solid 1px white;
+  margin-top: 62px;
+}
+
+.growth-welcome .start-earning-fold-holder .btn:hover {
+  color: var(--clear-blue);
+  background-color: white;
+}
+
+.growth-welcome .start-earning-fold-holder a {
+  color: white;
+  text-decoration: underline;
+}
+
+.growth-welcome .start-earning-fold-holder .link-holder {
+  margin-top: 60px;
+}
+
+.growth-welcome .start-earning-fold-holder {
+  background-color: var(--clear-blue);
+  color: white;
+  padding-top: 140px;
+  padding-bottom: 135px;
+  text-align: center;
+  margin-bottom: -64px;
+}
+
+.growth-welcome .origin-showcase {
+  background-image: url(images/growth/marketplace-screenshots-graphic.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
 }
 
 .transactions {
@@ -4695,6 +4896,10 @@ footer .copyright {
 
 .transactions .purchase .top > .status.pending {
   color: var(--gold);
+}
+
+.transactions .purchase .top > .status.withdrawn {
+  color: var(--orange-red);
 }
 
 .transactions .purchase .top > .status {
@@ -5379,6 +5584,10 @@ footer .copyright {
 
 .with-symbol {
   position: relative;
+}
+
+.create-listing .create-listing-step-2 .pricing-chooser .help-text .help-icon {
+  margin-left: auto;
 }
 
 .create-listing .create-listing-step-2 .pricing-chooser {
@@ -6931,5 +7140,12 @@ svg.help-icon:hover path {
   to {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .growth-welcome .origin-showcase {
+    background-image: url("images/growth/marketplace-screenshots-graphic@2x.png");
+    background-size: contain;
   }
 }
