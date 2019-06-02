@@ -450,6 +450,32 @@
   flex: 1;
 }
 
+.toggle {
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 1px var(--bluey-grey);
+  background-color: var(--pale-grey-two);
+}
+
+.toggle.toggle-on .toggle-switch {
+  left: 30px;
+}
+
+.toggle.toggle-on {
+  background-color: #1a82ff;
+}
+
+.toggle .toggle-switch {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  border: solid 1px var(--bluey-grey);
+  background-color: var(--white);
+}
+
 .weekCalendar {
   margin-bottom: 2rem;
 }
@@ -1613,6 +1639,43 @@
   transition: top 0.3s ease, opacity 0.3s ease, bottom 0.3s ease;
 }
 
+.growth-reward-amount.listing-card-growth-reward {
+  margin-left: 1rem;
+}
+
+.growth-reward-amount.listing-detail-growth-reward {
+  margin-left: auto;
+  background-color: var(--pale-grey-two);
+}
+
+.growth-reward-amount {
+  border-radius: 1.375rem;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--pale-grey);
+}
+
+.growth-reward-amount img {
+  width: 17px;
+  height: 17px;
+}
+
+.growth-reward-amount .earn {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: normal;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+  color: var(--steel);
+}
+
+.growth-reward-amount .ogn {
+  font-family: Lato;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem 0.25rem 0.25rem;
+  color: var(--clear-blue);
+}
+
 .blue-progress-bar-holder .indicators {
   font-size: 10px;
   color: #455d75;
@@ -2765,15 +2828,9 @@
   padding-top: 3rem;
 }
 
-.settings-box {
-  margin-bottom: 1rem;
-  padding: 2rem;
-  border: 1px solid var(--light);
-  border-radius: var(--default-radius);
-}
-
 .settings .form-text small {
-  font-size: 70%;
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .settings .form-text {
@@ -2781,8 +2838,115 @@
   margin-bottom: 0.5rem;
 }
 
+.settings .form-group.row {
+  border-bottom: solid 1px #c2cbd3;
+  background-color: var(--white);
+  padding: 0 1rem 1rem 1rem;
+}
+
+.settings .form-group.row.less-margin-bottom {
+  margin-bottom: 1rem;
+}
+
+.settings .form-group.row:last-of-type,
+.settings .form-group.row.no-border-bottom {
+  border-bottom: 0;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+.settings .form-group label {
+  font-size: 18px;
+  margin-bottom: 0.75rem;
+}
+
+.settings .form-group button {
+  margin-top: 0.5rem;
+}
+
+.settings .form-group .form-text {
+  line-height: 0.75rem;
+}
+
 .settings .form-group {
   margin-bottom: 1.5rem;
+}
+
+.settings-box {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 14px;
+  border: solid 1px #c2cbd3;
+  background-color: var(--white);
+  color: #000;
+}
+
+.settings-box .hide {
+  display: none;
+}
+
+.settings-box .toggle {
+  margin-top: 1rem;
+}
+
+.settings-box .dropdown .dropdown-menu {
+  position: absolute;
+  left: 16px;
+  top: -3px;
+  width: 322px;
+}
+
+.settings-box .settings-dropdown .dropdown-selected .arrow {
+  display: block;
+  margin: 0.25rem;
+  float: right;
+  content: " ";
+  height: 24px;
+  width: 24px;
+  background: url('images/keyboard-arrow-down-material.svg') no-repeat center;
+}
+
+.settings-box .settings-dropdown {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: normal;
+  padding: 0.5rem;
+  max-width: 320px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: solid 1px #6f8294;
+  background-color: #fafafa;
+}
+
+.settings-box .developer label {
+  line-height: calc(1.5em + 1rem + 2px);
+  margin-bottom: 0;
+  font-size: 0.875rem;
+}
+
+.settings-box .developer,
+.settings-box .restore,
+.settings-box input,
+.settings-box label {
+  color: #000;
+  font-size: 0.875rem;
+}
+
+.settings-box .restore {
+  color: var(--clear-blue);
+}
+
+@media (max-width: 767.98px) {
+  .settings h1 {
+    font-size: 32px;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .settings {
+    padding-top: 2rem;
+  }
 }
 
 footer {
@@ -3612,6 +3776,7 @@ footer .copyright {
   font-size: 14px;
   font-weight: normal;
   margin-left: 0.25rem;
+  margin-bottom: 0.12rem;
 }
 
 .listing-card .price {
@@ -6619,12 +6784,12 @@ footer .copyright {
     justify-content: center;
     margin-bottom: 2.5rem;
   }
+}
 
-  .country-flag-img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: .5rem;
-  }
+.country-flag-img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5rem;
 }
 
 .create-listing .create-listing-step-2 .pricing-chooser .help-text .help-icon {
