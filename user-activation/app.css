@@ -7279,10 +7279,6 @@ svg.help-icon:hover path {
   }
 }
 
-#app {
-  overflow: hidden !important;
-}
-
 .dropdown.profile.show {
   background-color: black !important;
 }
@@ -7311,11 +7307,7 @@ svg.help-icon:hover path {
 }
 
 .dropdown-menu.profile:before {
-  content: '';
-  width: 0 !important;
-  height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  display: none !important;
 }
 
 .dropdown-menu.profile > div {
@@ -7605,6 +7597,12 @@ svg.help-icon:hover path {
 .navbar .nav-item .dropdown-menu.confirmations {
   max-width: 500px;
   background-color: var(--pale-grey-three);
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav .nav-item .nav-link {
+    background-color: transparent;
+  }
 }
 
 .nav-item.notifications .count .total,
