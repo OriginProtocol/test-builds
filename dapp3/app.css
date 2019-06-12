@@ -1009,6 +1009,7 @@
 }
 
 .gallery-scroll-wrap .gallery-scroll {
+  overscroll-behavior-x: contain;
   height: 50vh;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
@@ -1636,8 +1637,16 @@
   flex-grow: 1;
 }
 
-.mobile-modal-light .actions {
-  margin-top: auto;
+.mobile-modal-light > .modal-content > div  .actions {
+  margin-top: auto !important;
+}
+
+.mobile-modal-light > .modal-content > div  .info + .actions {
+  margin-top: 3rem !important;
+}
+
+.mobile-modal-light > .modal-content > div  .info {
+  margin-top: auto !important;
 }
 
 .mobile-modal-light .modal-header.image-only {
@@ -3340,10 +3349,71 @@ footer .copyright {
   }
 }
 
-.attestation-modal > div .verification-code .form-control.airbnb-verification-code {
-  height: 6rem;
+.attestation-modal  > div  .verification-code .form-control.airbnb-verification-code {
+  text-align: left;
+  border: 0;
+  -ms-flex: auto;
+  -moz-flex: auto;
+  -webkit-flex: auto;
+  flex: auto;
+}
+
+.attestation-modal  > div  .verification-code .btn.copy-btn {
+  width: auto;
+  border: 0;
+  border-radius: 0;
+  border-left: 1px solid #c2cbd3;
+  cursor: pointer;
+  -ms-flex: auto 0 0;
+  -moz-flex: auto 0 0;
+  -webkit-flex: auto 0 0;
+  flex: auto 0 0;
+}
+
+.attestation-modal  > div  .verification-code {
+  display: flex;
   max-width: 24rem;
-  resize: none;
+  margin: 0 auto;
+  border: solid 1px #c2cbd3;
+  border-radius: 0.3rem;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.attestation-modal  .info .title ~ a {
+  margin-left: 5px;
+}
+
+.attestation-modal  .info .title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.attestation-modal  .info.yellow {
+  border: solid 1px var(--golden-rod);
+  background-color: rgba(244, 193, 16, 0.1);
+}
+
+.attestation-modal  .info.white {
+  border: solid 1px #c2cbd3;
+  background-color: white;
+  display: flex;
+  text-align: left;
+}
+
+.attestation-modal  .info {
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px var(--bluey-grey);
+  background-color: rgba(152, 167, 180, 0.1);
+  font-family: Lato;
+  font-size: 14px;
+  color: black;
+  padding: 10px;
+  margin-top: 1rem;
 }
 
 .attestation-modal > div .verification-code .form-control.website-verification-code {
@@ -3402,7 +3472,6 @@ footer .copyright {
 }
 
 .attestation-modal > div .verification-code .form-control {
-  max-width: 15rem;
   text-align: center;
 }
 
@@ -3429,8 +3498,24 @@ footer .copyright {
   flex-direction: column !important;
 }
 
+.attestation-modal > div form {
+  display: flex;
+  -ms-flex: auto;
+  -moz-flex: auto;
+  -webkit-flex: auto;
+  flex: auto;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
 .attestation-modal > div {
   font-size: 18px;
+}
+
+.attestation-modal.phone > div .verification-code {
+  max-width: 15rem;
 }
 
 .attestation-modal.phone > div h2::before {
@@ -3503,56 +3588,56 @@ footer .copyright {
   margin-bottom: 1.5rem;
 }
 
-.mobile-modal-light .attestation-modal.phone {
+.mobile-modal-light .attestation-modal {
   padding: 20px;
   text-align: center;
 }
 
-.mobile-modal-light .attestation-modal.phone h2 {
+.mobile-modal-light .attestation-modal h2 {
   padding-top: 7.5rem;
 }
 
-.mobile-modal-light .attestation-modal.phone .btn {
+.mobile-modal-light .attestation-modal .btn {
   width: 100%;
   border-radius: 2rem;
   padding: 0.75rem;
 }
 
-.mobile-modal-light .attestation-modal.phone .verification-code .form-control {
+.mobile-modal-light .attestation-modal .verification-code .form-control {
   display: inline-block;
 }
 
-.mobile-modal-light .attestation-modal.phone .country-code,
-.mobile-modal-light .attestation-modal.phone .form-control {
+.mobile-modal-light .attestation-modal .country-code,
+.mobile-modal-light .attestation-modal .form-control {
   border: solid 1px #c2cbd3;
   background-color: var(--white);
   color: black;
 }
 
-.mobile-modal-light .attestation-modal.phone .dropdown .dropdown-menu .dropdown-item .name {
+.mobile-modal-light .attestation-modal .dropdown .dropdown-menu .dropdown-item .name {
   color: black;
 }
 
-.mobile-modal-light .attestation-modal.phone .dropdown .dropdown-menu .dropdown-item .prefix {
+.mobile-modal-light .attestation-modal .dropdown .dropdown-menu .dropdown-item .prefix {
   color: #6f8294;
 }
 
-.mobile-modal-light .attestation-modal.phone .dropdown .dropdown-menu .dropdown-item:hover {
+.mobile-modal-light .attestation-modal .dropdown .dropdown-menu .dropdown-item:hover {
   background-color: var(--light-footer);
 }
 
-.mobile-modal-light .attestation-modal.phone .dropdown .dropdown-menu {
+.mobile-modal-light .attestation-modal .dropdown .dropdown-menu {
   border: solid 1px #c2cbd3;
   background-color: var(--white);
 }
 
-.mobile-modal-light .attestation-modal.phone .info .title {
+.mobile-modal-light .attestation-modal .info .title {
   display: block;
   font-weight: bold;
   margin-bottom: 3px;
 }
 
-.mobile-modal-light .attestation-modal.phone .info {
+.mobile-modal-light .attestation-modal .info {
   text-align: center;
   border-radius: 5px;
   border: solid 1px var(--bluey-grey);
@@ -3566,6 +3651,62 @@ footer .copyright {
 
 .mobile-modal-light .attestation-modal.phone > div h2::before {
   background-image: url(images/identity/phone-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.email > div h2::before {
+  background-image: url(images/identity/email-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.facebook > div h2::before {
+  background-image: url(images/identity/facebook-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.twitter > div h2::before {
+  background-image: url(images/identity/twitter-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.airbnb > div h2::before {
+  background-image: url(images/identity/airbnb-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.google > div h2::before {
+  background-image: url(images/identity/google-icon.svg);
+}
+
+.mobile-modal-light .attestation-modal.website > div h2::before {
+  background-image: url(images/identity/website-icon-light.svg);
+}
+
+.mobile-modal-light .attestation-modal.kakao > div h2::before {
+  background-image: url(images/identity/kakao-icon-large.svg);
+}
+
+.mobile-modal-light .attestation-modal.github > div h2::before {
+  background-image: url(images/identity/github-icon-large.svg);
+}
+
+.mobile-modal-light .attestation-modal.linkedin > div h2::before {
+  background-image: url(images/identity/linkedin-icon-large.svg);
+}
+
+.mobile-modal-light .attestation-modal.wechat > div h2::before {
+  background-image: url(images/identity/wechat-icon-large.svg);
+}
+
+.mobile-modal-light .attestation-modal > div {
+  display: flex;
+  -ms-flex: auto;
+  -moz-flex: auto;
+  -webkit-flex: auto;
+  flex: auto;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.mobile-modal-light .attestation-modal.success > div h2::before {
+  background-image: none;
 }
 
 .country-code {
@@ -3622,6 +3763,10 @@ footer .copyright {
   max-height: 200px;
   max-width: 320px;
   background-color: var(--dark-two);
+}
+
+.mobile-modal-light .attestation-modal.oauth:not(.success) h2 {
+  padding-top: 9rem;
 }
 
 .btn-filter {
