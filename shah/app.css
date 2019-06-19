@@ -4716,10 +4716,13 @@ footer .copyright {
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
 }
 
+.listing-cards.listing-horizontal-cards .listing-card .main-pic {
+  height: 170px;
+}
+
 .listing-cards.listing-horizontal-cards .listing-card {
   margin-right: 1.5rem;
-  min-width: 210px;
-  max-width: 30%;
+  width: 170px;
 }
 
 .listing-cards.listing-horizontal-cards {
@@ -4997,6 +5000,7 @@ body.has-profile-page {
 }
 
 .user-public-profile {
+  position: relative;
   padding-top: 2rem;
 }
 
@@ -5011,9 +5015,31 @@ body.has-profile-page {
   margin: 0 auto;
 }
 
+.user-public-profile .back-icon {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  top: 1rem;
+  left: 0.5rem;
+  position: absolute;
+  background-image: url('images/caret-grey.svg');
+  background-size: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 10;
+  -ms-transform: rotateZ(270deg);
+  -moz-transform: rotateZ(270deg);
+  -webkit-transform: rotateZ(270deg);
+  transform: rotateZ(270deg);
+}
+
 @media (max-width: 767.98px) {
   .user-public-profile > .row > .col-md-8 {
     padding: 0;
+  }
+
+  .user-public-profile .back-icon {
+    display: inline-block;
   }
 
   .user-public-profile {
@@ -5230,6 +5256,23 @@ body.has-profile-page {
   margin: 0 auto;
 }
 
+.edit-profile-modal .profile-fields-container .profile-name-fields > div:last-child {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.edit-profile-modal .profile-fields-container .profile-name-fields > div {
+  margin-right: 10px;
+}
+
+.edit-profile-modal .profile-fields-container .profile-name-fields {
+  display: flex;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
 .edit-profile-modal .profile-fields-container {
   display: flex;
   -ms-flex: auto;
@@ -5248,14 +5291,6 @@ body.has-profile-page {
     max-height: 100px;
     padding-top: 100px;
     margin: 0 auto;
-  }
-
-  .edit-profile-modal .profile-fields-container .form-group {
-    text-align: center;
-  }
-
-  .edit-profile-modal .profile-fields-container input {
-    text-align: center;
   }
 
   .edit-profile-modal .actions .btn {
