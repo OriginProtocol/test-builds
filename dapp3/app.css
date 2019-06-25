@@ -7849,102 +7849,6 @@ footer .copyright {
   }
 }
 
-.create-listing h1 {
-  font-size: 40px;
-  margin-bottom: 0.5rem;
-}
-
-.create-listing .choose-category .category:not(:last-of-type) {
-  border-bottom: 1px solid var(--light);
-}
-
-.create-listing .choose-category .category:hover {
-  opacity: 0.75;
-  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-  filter: alpha(opacity=75);
-}
-
-.create-listing .choose-category .category::before {
-  content: "";
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-right: 1rem;
-  border-radius: 50%;
-  background-color: var(--light);
-  background-repeat: no-repeat;
-  background-size: 60%;
-  background-position: center;
-}
-
-.create-listing .choose-category .category.forSale::before {
-  background-color: #7a26f3;
-  background-image: url(images/listing-types/sale-icon.svg);
-  background-position: 62% 60%;
-}
-
-.create-listing .choose-category .category.forRent::before {
-  background-color: #00d693;
-  background-image: url(images/listing-types/rent-icon.svg);
-}
-
-.create-listing .choose-category .category.services::before {
-  background-color: #fec100;
-  background-image: url(images/listing-types/services-icon.svg);
-  background-size: 66%;
-  background-position: 50% 40%;
-}
-
-.create-listing .choose-category .category.announcements::before {
-  background-color: #007fff;
-}
-
-.create-listing .choose-category .category {
-  display: flex;
-  width: 100%;
-  color: #000000;
-  font-size: 24px;
-  font-weight: bold;
-  align-items: center;
-  line-height: 1;
-  padding: 1.5rem 0;
-  max-width: 25rem;
-}
-
-.create-listing .choose-category {
-  border: 1px solid var(--light);
-  padding: 1.5rem;
-  align-items: center;
-  display: flex;
-  border-radius: 5px;
-  max-width: 600px;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-@media (max-width: 767.98px) {
-  .create-listing .step-description {
-    font-size: 16px;
-  }
-
-  .create-listing .choose-category .category::before {
-    width: 2.25rem;
-    height: 2.25rem;
-    margin-right: 0.75rem;
-  }
-
-  .create-listing .choose-category .category {
-    font-size: 18px;
-    padding: 1.25rem 0;
-  }
-
-  .create-listing .choose-category {
-    border: unset;
-    padding: unset;
-  }
-}
-
 .category-icon {
   border-radius: 50%;
   background-color: var(--light);
@@ -8029,12 +7933,6 @@ footer .copyright {
 @media (max-width: 767.98px) {
   .create-listing .step-description {
     font-size: 16px;
-  }
-
-  .create-listing .choose-category .category::before {
-    width: 2.25rem;
-    height: 2.25rem;
-    margin-right: 0.75rem;
   }
 
   .create-listing .choose-category .category {
