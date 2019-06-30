@@ -4991,6 +4991,14 @@ footer .copyright {
   }
 }
 
+.listing-card.masonry {
+  margin-top: 0;
+}
+
+.listing-card.masonry img {
+  border-radius: 10px;
+}
+
 .profile-page {
   background-color: var(--pale-grey-four);
 }
