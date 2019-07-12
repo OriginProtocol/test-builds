@@ -7367,8 +7367,13 @@
   width: 118px;
 }
 
+.growth-welcome .enroll-button.mobile {
+  margin-bottom: 40px;
+}
+
 .growth-welcome .enroll-button {
   margin-bottom: 134px;
+  max-width: 100%;
 }
 
 .growth-welcome .title-text {
@@ -7509,7 +7514,7 @@
   text-align: center;
 }
 
-.growth-welcome .fourth-fold-holder .coin-section {
+.growth-welcome .fourth-fold-holder .coins-section {
   background-color: var(--clear-blue);
   height: 340px;
   width: 100%;
@@ -7518,11 +7523,11 @@
   background-repeat: no-repeat;
 }
 
-.growth-welcome .fourth-fold-holder .boosting-section .text-holder {
+.growth-welcome .fourth-fold-holder .promoting-section .text-holder {
   max-width: 350px;
 }
 
-.growth-welcome .fourth-fold-holder .boosting-section .title {
+.growth-welcome .fourth-fold-holder .promoting-section .title {
   font-family: Poppins;
   font-size: 36px;
   font-weight: 600;
@@ -7531,21 +7536,22 @@
   color: var(--dark);
 }
 
-.growth-welcome .fourth-fold-holder .boosting-section .text {
+.growth-welcome .fourth-fold-holder .promoting-section .text {
   font-family: Lato;
   font-weight: normal;
   line-height: 1.44;
   color: var(--dark);
 }
 
-.growth-welcome .fourth-fold-holder .boosting-section {
+.growth-welcome .fourth-fold-holder .promoting-section {
   background-color: var(--pale-grey-eight);
   height: 500px;
   padding-top: 150px;
   padding-right: 135px;
+  padding-left: 35px;
 }
 
-.growth-welcome .fourth-fold-holder .boosting-section.mobile {
+.growth-welcome .fourth-fold-holder .promoting-section.mobile {
   padding-top: 50px;
   padding-right: 35px;
 }
@@ -7584,6 +7590,7 @@
   height: 500px;
   padding-top: 150px;
   padding-left: 135px;
+  padding-right: 35px;
 }
 
 .growth-welcome .fourth-fold-holder .rewards-section.mobile {
@@ -10865,6 +10872,39 @@ svg.help-icon:hover path {
   margin-top: -16px;
 }
 
+.messages-page .conversations-wrapper .conversations-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.messages-page .conversations-wrapper .conversation-view {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 2rem;
+  display: flex;
+  -ms-flex: 3;
+  -moz-flex: 3;
+  -webkit-flex: 3;
+  flex: 3;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.messages-page .conversations-wrapper {
+  display: flex;
+  height: calc(100vh - 6rem);
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
 .mobile-modal-light .messages-modal.modal-content .messages {
   padding: 0 1rem;
 }
@@ -10873,6 +10913,18 @@ svg.help-icon:hover path {
   margin-bottom: 1rem;
   padding: 1rem 1rem 0rem 1rem;
   margin-top: auto;
+}
+
+.mobile-modal-light .messages-modal.modal-content .conversations-wrapper {
+  height: 100%;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.mobile-modal-light .messages-modal.modal-content .conversation-view {
+  padding: 0;
 }
 
 .mobile-modal-light .messages-modal.modal-content {
