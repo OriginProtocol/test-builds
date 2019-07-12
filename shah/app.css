@@ -7404,6 +7404,7 @@
   background-repeat: no-repeat;
   margin-left: -100px;
   padding-left: 100px;
+  max-width: 600px;
 }
 
 .growth-welcome .btn {
@@ -7649,6 +7650,7 @@
   background-image: url(images/growth/marketplace-screenshots-graphic.png);
   background-position: bottom left;
   background-repeat: no-repeat;
+  max-width: 600px;
 }
 
 .growth-banned.mobile img {
@@ -8876,6 +8878,11 @@ svg.help-icon:hover path {
   color: var(--dusk);
 }
 
+.navbar .nav-item.mobile .dropdown-menu .dropdown-item:active,
+.navbar .nav-item.mobile .dropdown-menu .dropdown-item.active {
+  background-color: var(--pale-grey);
+}
+
 .navbar .nav-item.mobile .dropdown-menu .dropdown-item::before {
   position: absolute;
   left: 1.25rem;
@@ -8968,8 +8975,8 @@ svg.help-icon:hover path {
 }
 
 .dropdown.show .nav-link {
-  border-left: 1px solid var(--light);
-  border-right: 1px solid var(--light);
+  border-left-color: var(--light);
+  border-right-color: var(--light);
 }
 
 .dropdown.show .nav-link::after {
@@ -9154,6 +9161,11 @@ svg.help-icon:hover path {
 @media (max-width: 767.98px) {
   .dropdown.show .nav-link::after {
     content: unset;
+  }
+
+  .dropdown.show .nav-link {
+    border-left-color: transparent;
+    border-right-color: transparent;
   }
 
   .dropdown-menu.profile .close-icon {
@@ -9493,6 +9505,14 @@ svg.help-icon:hover path {
   padding: 0 1rem;
 }
 
+.navbar.dark .navbar-brand {
+  background: url(images/origin-logo.svg) no-repeat center;
+}
+
+.navbar.dark {
+  background-color: #131d27;
+}
+
 .navbar:not(.no-border) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -9678,6 +9698,10 @@ svg.help-icon:hover path {
     font-size: 24px;
     position: absolute;
     left: 50%;
+    white-space: nowrap;
+    max-width: calc(100% - 7rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
     -ms-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -9758,6 +9782,7 @@ svg.help-icon:hover path {
 
   .navbar {
     padding: 0;
+    min-height: 3.75rem;
   }
 
   .nav-back-icon {
@@ -10434,6 +10459,7 @@ svg.help-icon:hover path {
 .message {
   margin: 10px 0 20px 0;
   width: 100%;
+  max-height: max-content;
   -ms-flex: 1 0 auto;
   -moz-flex: 1 0 auto;
   -webkit-flex: 1 0 auto;
@@ -10636,10 +10662,15 @@ svg.help-icon:hover path {
 }
 
 .room-status {
-  padding: 0.75rem;
+  padding: 1.1rem 0.75rem;
   display: flex;
   cursor: pointer;
   font-size: 16px;
+  border-bottom: 1px solid #dde6ea;
+}
+
+.room-status:last-child {
+  border: 0;
 }
 
 .room-status.active .time {
@@ -10731,10 +10762,14 @@ svg.help-icon:hover path {
 }
 
 .messages-page .messages {
-  max-height: calc(100vh - 10.25rem);
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   align-items: start;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
   -ms-flex-direction: column;
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
@@ -10748,9 +10783,10 @@ svg.help-icon:hover path {
 
 .messages-page .messages .timestamp {
   color: var(--bluey-grey);
-  font-size: 12px;
+  font-size: 10px;
+  text-align: center;
   align-self: center;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .messages-page .messages .offer-event {
@@ -10829,8 +10865,18 @@ svg.help-icon:hover path {
   margin-top: -16px;
 }
 
+.mobile-modal-light .messages-modal.modal-content .messages {
+  padding: 0 1rem;
+}
+
 .mobile-modal-light .messages-modal.modal-content .send-message {
   margin-bottom: 1rem;
+  padding: 1rem 1rem 0rem 1rem;
+  margin-top: auto;
+}
+
+.mobile-modal-light .messages-modal.modal-content {
+  min-height: auto;
 }
 
 .mobile-modal-light .messages-modal.modal-header .user-profile-link .avatar {
@@ -10843,13 +10889,22 @@ svg.help-icon:hover path {
   display: inline-block;
 }
 
+.mobile-modal-light .messages-modal {
+  margin: 0;
+}
+
+.dropdown-menu .notification-row {
+  padding: 1.25rem;
+}
+
 .notification-row {
   display: flex;
   cursor: pointer;
   font-size: 18px;
   font-weight: normal;
-  border-bottom: 1px solid var(--light);
-  padding: 0.75rem;
+  border-bottom: 1px solid #c0cbd4;
+  padding: 1.25rem 0rem;
+  min-height: 6.25rem;
 }
 
 .notification-row:hover {
@@ -10868,11 +10923,20 @@ svg.help-icon:hover path {
   text-overflow: ellipsis;
 }
 
+.notification-row > div:nth-child(2) > div:nth-child(2) a {
+  font-weight: 500;
+}
+
+.notification-row > div:nth-child(2) > div:nth-child(2) .wallet {
+  font-size: 13px;
+  color: #6f8294;
+}
+
 .notification-row > div:nth-child(2) > div:nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
-  color: var(--steel);
+  color: dark;
 }
 
 .notification-row > div:nth-child(2) {
@@ -10884,7 +10948,7 @@ svg.help-icon:hover path {
 }
 
 .notification-row > div:nth-child(3) {
-  color: var(--steel);
+  color: var(--bluey-grey);
   font-size: 14px;
 }
 
@@ -10893,26 +10957,27 @@ svg.help-icon:hover path {
 }
 
 .notification-row a {
-  font-weight: bold;
+  font-weight: 500;
 }
 
-.notification-row .caret {
-  border: 1px solid var(--clear-blue);
-  border-radius: 2rem;
-  width: 1.75rem;
-  height: 1.75rem;
-  margin-left: 1rem;
-  background: url(images/caret-blue.svg) no-repeat center 7px;
-  background-size: 12px;
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
+.notification-row .pic .main-pic.empty {
+  background: var(--light) url(images/default-image.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
 }
 
-.notifications-list {
-  border: 1px solid var(--light);
-  border-radius: var(--default-radius);
+.notification-row .pic .main-pic {
+  width: 3.7rem;
+  height: 3.7rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.notification-row .pic {
+  margin-right: 1.5rem;
+  position: relative;
 }
 
 .app-spinner {
