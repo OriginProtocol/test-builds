@@ -1035,14 +1035,26 @@
   font-weight: 300;
 }
 
-.loading-spinner {
-  background: url(images/spinner-animation-dark.svg) no-repeat center;
+.loading-spinner-container {
+  background-color: white;
   background-size: cover;
+  width: 4.5em;
+  height: 4.5em;
   position: fixed;
   top: calc(50% - 1.5rem);
   left: calc(50% - 1.5rem);
-  width: 3rem;
-  height: 3rem;
+  border-radius: 8px;
+  box-shadow: 0px 8px 12px 0px lightGray;
+}
+
+.loading-spinner {
+  background: url(images/spinner-animation-dark.svg) no-repeat center;
+  background-size: cover;
+  width: 3em;
+  height: 3em;
+  position: relative;
+  top: 0.75em;
+  left: 0.75em;
 }
 
 .earnings-progress {
@@ -10979,14 +10991,13 @@ svg.help-icon:hover path {
 
 .notification-row > div:nth-child(2) > div:nth-child(2) .wallet {
   font-size: 13px;
-  color: #6f8294;
+  color: dark;
 }
 
 .notification-row > div:nth-child(2) > div:nth-child(2) {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
-  color: dark;
 }
 
 .notification-row > div:nth-child(2) {
