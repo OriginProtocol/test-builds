@@ -2821,8 +2821,10 @@
 
 .telegram-login-button {
   position: relative;
+  width: 100%;
   max-width: 226px;
   max-height: 40px;
+  margin-bottom: 1rem;
 }
 
 .telegram-login-button button.btn + iframe {
@@ -4951,6 +4953,10 @@
   width: 100%;
   border-radius: 2rem;
   padding: 0.75rem;
+}
+
+.mobile-modal-light .attestation-modal .telegram-login-button button.btn {
+  padding: 0.375rem 2rem;
 }
 
 .mobile-modal-light .attestation-modal .verification-code .form-control {
