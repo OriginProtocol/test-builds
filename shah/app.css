@@ -2819,6 +2819,30 @@
   height: 6px;
 }
 
+.telegram-login-button {
+  position: relative;
+  max-width: 226px;
+  max-height: 40px;
+}
+
+.telegram-login-button button.btn + iframe {
+  z-index: 10000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: alpha(opacity=0);
+}
+
+.telegram-login-button button.btn {
+  max-width: 226px;
+  max-height: 40px;
+  padding: 0.375rem 2rem;
+}
+
 .attestations {
   display: flex;
 }
