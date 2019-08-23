@@ -5427,10 +5427,10 @@
 .sort-modal.modal-content .sort-form label.checked:after {
   content: '';
   display: inline-block;
-  background-image: url('images/checkmark-icon.svg');
+  background-image: url('images/checkmark-blue.svg');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 1.75rem;
+  background-size: 1.25rem;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -5945,7 +5945,6 @@
 
 @media (max-width: 767.98px) {
   .listings-back-link {
-    margin-top: 1rem;
     margin-bottom: -1rem;
   }
 
@@ -10346,6 +10345,7 @@ svg.help-icon:hover path {
   position: relative;
   padding: 0 0 0 1rem;
   line-height: 1rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
