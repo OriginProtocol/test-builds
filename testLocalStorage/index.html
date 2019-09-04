@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Origin Protocol DApp</title>
+    <meta name="title" content="Origin Protocol" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="expires" content="0" />
+    <meta property="og:url" content="https://www.shoporigin.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Origin Protocol Dapp" />
+    <meta
+      property="og:description"
+      content="Decentralized marketplace on the blockchain"
+    />
+    <meta
+      property="og:image"
+      content="https://www.shoporigin.com/images/join-origin-earn-tokens.png"
+    />
+    <meta name="apple-itunes-app" content="app-id=1446091928" />
+    <link rel="icon" href="favicon.ico" />
+    
+    <link rel="stylesheet" href="app.1eb04335.css" />
+    
+  </head>
+  <body>
+    <div id="app">
+      <script>
+        function checkLocalStorage() {
+          var test = 'test'
+          try {
+            localStorage.setItem(test, test)
+            localStorage.removeItem(test)
+            return true
+          } catch (e) {
+            return false
+          }
+        }
+        var loadingDiv = document.createElement('div')
+
+        if (checkLocalStorage()) {
+          loadingDiv.className = 'loading-screen'
+        } else {
+          loadingDiv.className = 'alert'
+          loadingDiv.id = 'warning'
+          document.body.appendChild(loadingDiv)
+          var error = document.createElement('div')
+          error.className = 'closebtn'
+          error.innerHTML += '&times;'
+          error.onclick = function() {
+            document.getElementById('app').removeChild(loadingDiv)
+          }
+          loadingDiv.innerHTML +=
+            '<fbt>You might have cookies disabled. If you are using Brave lower your shileds.</fbt>'
+          loadingDiv.appendChild(error)
+        }
+        document.getElementById('app').appendChild(loadingDiv)
+      </script>
+    </div>
+  </body>
+  <!-- <script crossorigin src="vendor/openpgp.min.js"></script>
+  <script>
+    if (typeof window.openpgp !== 'undefined') {
+      openpgp.config.show_comment = false
+      openpgp.config.show_version = false
+      openpgp.initWorker({ path: 'vendor/openpgp.worker.min.js' })
+    }
+  </script> -->
+  <script>
+    localStorage.ognNetwork = 'rinkeby'
+    localStorage.metaMaskEnabled = 'true'
+  </script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-106384880-2"
+  ></script>
+  <script>
+    var hostname = window.location.hostname
+    window.dataLayer = window.dataLayer || []
+    if (window.gtag == undefined) {
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+    }
+    if (hostname !== 'localhost' && hostname !== '0.0.0.0') {
+      gtag('js', new Date())
+    }
+  </script>
+  <script src="app.1eb04335.js"></script
+  >
+</html>
