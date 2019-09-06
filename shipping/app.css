@@ -11337,6 +11337,11 @@ svg.help-icon:hover path {
 
 .confirm-shipping-address {
   padding: 0;
+  display: flex;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
 }
 
 .confirm-shipping-address h1 {
@@ -11348,6 +11353,14 @@ svg.help-icon:hover path {
   margin-top: 3rem;
   text-align: center;
   font-weight: bold;
+}
+
+.confirm-shipping-address .form-container {
+  overflow: auto;
+  -ms-flex: 1;
+  -moz-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
 }
 
 .confirm-shipping-address .shipping-address-form .desc {
@@ -11384,17 +11397,34 @@ svg.help-icon:hover path {
 .confirm-shipping-address .actions .btn {
   width: 100%;
   padding: 0.875rem 0;
-  margin-top: 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .confirm-shipping-address .actions {
-  padding-top: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 @media (max-width: 767.98px) {
   .confirm-shipping-address .shipping-address-form {
     border: 0;
     padding: 1rem;
+  }
+
+  .confirm-shipping-address .actions .btn {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .confirm-shipping-address .actions {
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -11545,12 +11575,17 @@ svg.help-icon:hover path {
 .confirm-purchase-page .confirm-purchase-content .actions .btn {
   width: 100%;
   padding: 0.875rem 0;
-  margin-top: 1rem;
+  margin: 1rem 1rem 0 1rem;
   border-radius: 50px;
 }
 
 .confirm-purchase-page .confirm-purchase-content .actions {
   padding-top: 1.5rem;
+  display: flex;
+  -ms-flex-direction: row-reverse;
+  -moz-flex-direction: row-reverse;
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .confirm-purchase-page .confirm-purchase-content {
@@ -11573,9 +11608,18 @@ svg.help-icon:hover path {
     border-radius: 0;
   }
 
+  .confirm-purchase-page .confirm-purchase-content .actions .btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .confirm-purchase-page .confirm-purchase-content .actions {
     padding: 1rem;
     margin-top: auto;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
   }
 
   .confirm-purchase-page .confirm-purchase-content {
