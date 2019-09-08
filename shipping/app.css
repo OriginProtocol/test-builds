@@ -2789,7 +2789,6 @@
 }
 
 .mobile-modal-light {
-  touch-action: none;
   position: fixed;
   z-index: 2000;
   -webkit-transform: translate3d(0, 0, 0);
@@ -11433,6 +11432,41 @@ svg.help-icon:hover path {
   margin-bottom: 1rem;
 }
 
+.availability-modal.hourly .weekCalendar {
+  overflow-y: scroll;
+  position: absolute;
+  top: 10.5rem;
+  bottom: 6.125rem;
+  left: 3rem;
+  right: 3rem;
+}
+
+.availability-modal.hourly .actions {
+  position: absolute;
+  left: 3rem;
+  right: 3rem;
+  bottom: 0.5rem;
+}
+
+@media (max-width: 767.98px) {
+  .availability-modal.hourly .weekCalendar {
+    top: 9.6rem;
+    bottom: 4.125rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .availability-modal.hourly .actions {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.availability-modal {
+  height: 95vh;
+}
+
 .availability-modal .choose-dates {
   -ms-flex: auto 0 0;
   -moz-flex: auto 0 0;
@@ -11456,6 +11490,21 @@ svg.help-icon:hover path {
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+
+.availability-modal.nightly .actions {
+  position: absolute;
+  left: 3rem;
+  right: 3rem;
+  bottom: 0.5rem;
+}
+
+.availability-modal.nightly .availability-calendar {
+  position: absolute;
+  top: 7.5rem;
+  bottom: 8.125rem;
+  left: 3rem;
+  right: 3rem;
 }
 
 .availability-modal.modal-content {
@@ -11505,6 +11554,19 @@ svg.help-icon:hover path {
 }
 
 @media (max-width: 767.98px) {
+  .availability-modal.nightly .actions {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .availability-modal.nightly .availability-calendar {
+    top: 5rem;
+    bottom: 6rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
   .availability-modal .actions .btn {
     max-width: 100%;
     width: 100%;
@@ -11516,6 +11578,7 @@ svg.help-icon:hover path {
   }
 
   .availability-modal {
+    height: auto;
     padding: 1rem;
   }
 }
