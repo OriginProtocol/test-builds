@@ -5484,7 +5484,8 @@
   flex-direction: column;
 }
 
-.promote-listing h1 {
+.promote-listing h1,
+.promote-listing.create-listing h1 {
   font-size: 1.5rem;
 }
 
