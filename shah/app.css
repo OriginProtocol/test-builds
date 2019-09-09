@@ -4836,6 +4836,17 @@
   }
 }
 
+.absolute-iframe {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .beta-modal {
   background: url(images/beta.svg) no-repeat top center;
   background-size: 11rem;
@@ -5351,7 +5362,7 @@
 
 .promote-listing .amount .form-control {
   border: 0;
-  height: 1em;
+  height: 1.5em;
 }
 
 .promote-listing .amount .input-wrap {
@@ -5473,9 +5484,16 @@
   flex-direction: column;
 }
 
+.promote-listing h1 {
+  font-size: 1.5rem;
+}
+
+.promote-listing > div .actions .btn {
+  margin-top: 2rem;
+}
+
 .promote-listing > div .actions {
   width: 100%;
-  margin-top: 2rem;
 }
 
 .promote-listing > div h4 {
@@ -5501,12 +5519,16 @@
 }
 
 @media (max-width: 767.98px) {
-  .promote-listing > div .actions .btn {
+  .promote-listing  > div .actions .btn {
     width: 100%;
   }
 
-  .promote-listing > div .actions {
+  .promote-listing  > div .actions {
     margin-top: auto;
+  }
+
+  .promote-listing {
+    max-height: 100%;
   }
 }
 
@@ -11290,7 +11312,7 @@ svg.help-icon:hover path {
   }
 
   .promote-listing-cta {
-    margin: 1rem -1rem 1rem -1rem;
+    margin: 1rem -15px 1rem -15px;
     border-width: 1px 0;
   }
 }
