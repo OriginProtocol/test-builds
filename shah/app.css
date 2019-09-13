@@ -4837,17 +4837,6 @@
   }
 }
 
-.absolute-iframe {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .beta-modal {
   background: url(images/beta.svg) no-repeat top center;
   background-size: 11rem;
@@ -11201,6 +11190,8 @@ svg.help-icon:hover path {
 
 .historical-warning-container {
   margin-bottom: 2rem;
+  padding: 0 0 2rem 0;
+  border-bottom: 1px solid #dde6ea;
 }
 
 .historical-warning-container .historical-warning {
@@ -12398,6 +12389,25 @@ main {
   -moz-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+
+.test-build-badge {
+  position: fixed;
+  top: 0;
+  display: inline-block;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+  background-color: #007bff;
+  color: #fff;
+  left: 50%;
+  z-index: 1000;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.5rem;
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .translation-modal {
