@@ -4606,7 +4606,6 @@
 
 .settings .settings-box .developer .form-group label {
   font-size: 14px;
-  margin-left: 2rem;
 }
 
 .settings .test-builds {
@@ -9489,7 +9488,8 @@
 }
 
 @media (max-width: 767.98px) {
-  .create-listing h1 a.back {
+  .create-listing h1 a.back,
+  .promote-listing h1 a.back {
     position: absolute;
     left: 0;
     width: 1.25rem;
@@ -9505,13 +9505,15 @@
     transform: rotateZ(270deg);
   }
 
-  .create-listing h1 {
+  .create-listing h1,
+  .promote-listing h1 {
     font-size: 24px;
     text-align: center;
     position: relative;
   }
 
-  .create-listing .sub-categories {
+  .create-listing .sub-categories,
+  .promote-listing .sub-categories {
     width: 100%;
   }
 }
