@@ -5788,16 +5788,13 @@
 .listing-search-wrapper .search-wrapper .search-input-wrapper .search-input .clear-button {
   display: none;
   position: absolute;
-  right: 0.25rem;
+  right: 0;
   top: 1px;
   bottom: 1px;
-  width: 2rem;
-  background-color: white;
-  background-image: url('images/nav/close-icon.svg');
-  background-repeat: no-repeat;
-  background-position: center;
   border: 0;
-  background-size: 1.25rem;
+  font-size: 12px;
+  color: #1d77ff;
+  background: #fff;
 }
 
 .listing-search-wrapper .search-wrapper .search-input-wrapper .search-input .form-control:valid + .clear-button {
@@ -5859,8 +5856,7 @@
 }
 
 .listing-search-wrapper .search-wrapper .search-dropdown .featured-categories-wrapper {
-  margin: 0 -2rem;
-  overflow-x: scroll;
+  margin: 0 0rem;
 }
 
 .listing-search-wrapper .search-wrapper .search-dropdown .featured-categories .category-icon.rewards:before {
@@ -5909,7 +5905,7 @@
 
 .listing-search-wrapper .search-wrapper .search-dropdown .featured-categories .category-icon {
   width: 60px;
-  margin-right: 20px;
+  margin: 0 10px 10px;
   text-align: center;
   color: var(--dark);
   font-size: 0.6rem;
@@ -5923,7 +5919,11 @@
 
 .listing-search-wrapper .search-wrapper .search-dropdown .featured-categories {
   display: inline-flex;
-  padding: 0 2rem;
+  margin: 0 -10px;
+  -ms-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .listing-search-wrapper .search-wrapper .search-dropdown {
