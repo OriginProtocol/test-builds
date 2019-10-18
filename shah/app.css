@@ -7427,6 +7427,163 @@
   margin: 0 auto;
 }
 
+.download-wallet-cta {
+  margin-bottom: 2rem;
+}
+
+.download-wallet-cta .origin-app-banner .content-container {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.download-wallet-cta .origin-app-banner h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.download-wallet-cta .origin-app-banner .desc {
+  margin-bottom: 1.75rem;
+  line-height: 1.2;
+  padding: 0 0.75rem;
+}
+
+.download-wallet-cta .origin-app-banner .recommended-tag {
+  background-color: #0d1d29;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem;
+  -ms-transform: rotate(45deg) translateX(30%) translateY(-100%);
+  -moz-transform: rotate(45deg) translateX(30%) translateY(-100%);
+  -webkit-transform: rotate(45deg) translateX(30%) translateY(-100%);
+  transform: rotate(45deg) translateX(30%) translateY(-100%);
+}
+
+.download-wallet-cta .origin-app-banner img {
+  max-width: 100%;
+}
+
+.download-wallet-cta .origin-app-banner .actions a.ios-link {
+  background-image: url('/images/onboard/app-store-button.svg');
+}
+
+.download-wallet-cta .origin-app-banner .actions a.android-link {
+  background-image: url('/images/onboard/google-play-button.svg');
+}
+
+.download-wallet-cta .origin-app-banner .actions a {
+  display: inline-block;
+  height: 3rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.download-wallet-cta .origin-app-banner .actions {
+  display: flex;
+  justify-content: space-around;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.download-wallet-cta .origin-app-banner {
+  position: relative;
+  padding: 4.125rem;
+  border-radius: 5px;
+  background-color: #007fff;
+  margin-bottom: 1.25rem;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet .thirdparty-wallet-name {
+  color: var(--dark);
+  justify-content: center;
+  display: flex;
+  line-height: 1.3rem;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet:before {
+  content: '';
+  display: inline-block;
+  background-image: url('/images/onboard/wallets/metamask-icon.svg');
+  height: 2.5rem;
+  width: 2.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1rem;
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet.dapper:before {
+  background-image: url('/images/onboard/wallets/dapper.png');
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet.imtoken:before {
+  background-image: url('/images/onboard/wallets/imtoken.png');
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet.trust:before {
+  background-image: url('/images/onboard/wallets/trustwallet.png');
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet.coinbase:before {
+  background-image: url('/images/onboard/wallets/coinbasewallet.png');
+}
+
+.download-wallet-cta .thirdparty-wallets .thirdparty-wallet {
+  display: flex;
+  border-radius: 5px;
+  border: solid 1px #c2cbd3;
+  padding: 2rem 3rem;
+}
+
+.download-wallet-cta .thirdparty-wallets {
+  display: grid;
+  grid-template-columns: calc(50% - 0.5rem) calc(50% - 0.5rem);
+  grid-row-gap: 1rem;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .download-wallet-cta .origin-app-banner h1 {
+    margin-top: 1rem;
+  }
+
+  .download-wallet-cta .origin-app-banner .recommended-tag {
+    font-size: 0.625rem;
+    padding: 0.375rem;
+    -ms-transform: rotate(45deg) translateX(30%) translateY(-150%);
+    -moz-transform: rotate(45deg) translateX(30%) translateY(-150%);
+    -webkit-transform: rotate(45deg) translateX(30%) translateY(-150%);
+    transform: rotate(45deg) translateX(30%) translateY(-150%);
+  }
+
+  .download-wallet-cta .origin-app-banner .actions a {
+    height: 2.5rem;
+  }
+
+  .download-wallet-cta .origin-app-banner {
+    padding: 1.5rem;
+  }
+
+  .download-wallet-cta .thirdparty-wallets .wallet {
+    padding: 1rem;
+  }
+}
+
 .onboard .onboard-box.profile-email {
   padding: 4rem 4rem 2rem 4rem;
 }
@@ -9242,129 +9399,6 @@
   .container.transactions {
     padding-top: 0.75rem;
   }
-}
-
-.mobile-modal {
-  font-size: 16px;
-}
-
-.mobile-modal a {
-  color: var(--white);
-  text-decoration: underline;
-}
-
-.mobile-modal h5 {
-  font-family: Poppins;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.25;
-  color: white;
-}
-
-.mobile-modal .screenshots img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-}
-
-.mobile-modal .screenshots {
-  margin-bottom: 2rem;
-}
-
-.mobile-modal .description {
-  display: flex;
-  text-align: center;
-  background: #2e3f53;
-}
-
-.mobile-modal .blurb {
-  font-size: 18px;
-  line-height: 1.33;
-}
-
-.mobile-modal .qr {
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  background: white;
-}
-
-.mobile-modal .actions label input {
-  margin-right: 0.25rem;
-}
-
-.mobile-modal .actions label {
-  margin-top: 0.5rem;
-  color: var(--white);
-  font-size: 12px;
-}
-
-.mobile-modal .actions {
-  display: flex;
-  align-items: center;
-  -ms-flex-direction: column;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-
-.pl-modal-mobile .pl-modal-content.is-mobile .close {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-}
-
-.pl-modal-mobile .pl-modal-content.is-mobile .mobile-modal {
-  margin: 20px 15px 0;
-}
-
-.pl-modal-mobile .pl-modal-content.is-mobile {
-  position: relative;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .screenshots img {
-  width: 70%;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .screenshots {
-  padding-top: 3rem;
-  margin: -3rem -3rem 3rem -3rem;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background: #111d28;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .description {
-  align-items: center;
-  text-align: left;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .qr img {
-  height: 110px;
-  width: 110px;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .qr {
-  padding: 20px;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop .actions .btn {
-  width: 100%;
-}
-
-.pl-modal-mobile .pl-modal-content.is-desktop {
-  max-width: 655px !important;
-}
-
-.pl-modal-mobile .close {
-  color: #98a7b4;
-  text-shadow: none;
 }
 
 .create-listing {
@@ -11352,13 +11386,13 @@ svg.help-icon:hover path {
     min-width: 100%;
   }
 
-  .listing-detail .seller-info .seller-listings .user-listings .listings-header {
+  .listing-detail .seller-info .user-listings .listings-header {
     font-family: var(--heading-font);
     font-size: 18px;
     margin-bottom: 1.25rem;
   }
 
-  .listing-detail .seller-info .seller-listings {
+  .listing-detail .seller-info .user-listings {
     border-top: 1px solid #dde6ea;
     padding: 1.5rem 0 0 0;
   }
@@ -12807,6 +12841,34 @@ main {
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .promote-listing .how-works:before {
     background-image: url("images/rockets-graphic@2x.png");
+    background-size: contain;
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.dapper:before {
+    background-image: url("/images/onboard/wallets/dapper@2x.png");
+    background-size: contain;
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.imtoken:before {
+    background-image: url("/images/onboard/wallets/imtoken@2x.png");
+    background-size: contain;
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.trust:before {
+    background-image: url("/images/onboard/wallets/trustwallet@2x.png");
+    background-size: contain;
+  }
+}
+
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.coinbase:before {
+    background-image: url("/images/onboard/wallets/coinbasewallet@2x.png");
     background-size: contain;
   }
 }
