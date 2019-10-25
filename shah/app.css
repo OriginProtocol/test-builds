@@ -7468,11 +7468,11 @@
 }
 
 .download-wallet-cta .origin-app-banner .actions a.ios-link {
-  background-image: url('/images/onboard/app-store-button.svg');
+  background-image: url('images/onboard/app-store-button.svg');
 }
 
 .download-wallet-cta .origin-app-banner .actions a.android-link {
-  background-image: url('/images/onboard/google-play-button.svg');
+  background-image: url('images/onboard/google-play-button.svg');
 }
 
 .download-wallet-cta .origin-app-banner .actions a {
@@ -7518,7 +7518,7 @@
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet:before {
   content: '';
   display: inline-block;
-  background-image: url('/images/onboard/wallets/metamask-icon.svg');
+  background-image: url('images/onboard/wallets/metamask-icon.svg');
   height: 2.5rem;
   width: 2.5rem;
   background-size: contain;
@@ -7528,19 +7528,19 @@
 }
 
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.dapper:before {
-  background-image: url('/images/onboard/wallets/dapper.png');
+  background-image: url('images/onboard/wallets/dapper.png');
 }
 
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.imtoken:before {
-  background-image: url('/images/onboard/wallets/imtoken.png');
+  background-image: url('images/onboard/wallets/imtoken.png');
 }
 
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.trust:before {
-  background-image: url('/images/onboard/wallets/trustwallet.png');
+  background-image: url('images/onboard/wallets/trustwallet.png');
 }
 
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.coinbase:before {
-  background-image: url('/images/onboard/wallets/coinbasewallet.png');
+  background-image: url('images/onboard/wallets/coinbasewallet.png');
 }
 
 .download-wallet-cta .thirdparty-wallets .thirdparty-wallet {
@@ -12847,28 +12847,28 @@ main {
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.dapper:before {
-    background-image: url("/images/onboard/wallets/dapper@2x.png");
+    background-image: url("images/onboard/wallets/dapper@2x.png");
     background-size: contain;
   }
 }
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.imtoken:before {
-    background-image: url("/images/onboard/wallets/imtoken@2x.png");
+    background-image: url("images/onboard/wallets/imtoken@2x.png");
     background-size: contain;
   }
 }
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.trust:before {
-    background-image: url("/images/onboard/wallets/trustwallet@2x.png");
+    background-image: url("images/onboard/wallets/trustwallet@2x.png");
     background-size: contain;
   }
 }
 
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.coinbase:before {
-    background-image: url("/images/onboard/wallets/coinbasewallet@2x.png");
+    background-image: url("images/onboard/wallets/coinbasewallet@2x.png");
     background-size: contain;
   }
 }
