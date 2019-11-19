@@ -9075,14 +9075,6 @@
   padding-right: 90px;
 }
 
-.no-transactions .image-container img {
-  max-width: 75%;
-}
-
-.no-transactions .image-container {
-  padding-right: 90px;
-}
-
 .container.transactions {
   padding-top: 3rem;
   max-width: 760px;
@@ -9536,6 +9528,14 @@
   .container.transactions {
     padding-top: 0.75rem;
   }
+}
+
+.no-transactions .image-container img {
+  max-width: 75%;
+}
+
+.no-transactions .image-container {
+  padding-right: 90px;
 }
 
 .create-listing {
