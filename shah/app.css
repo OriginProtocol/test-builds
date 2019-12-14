@@ -1088,6 +1088,24 @@
   font-weight: 300;
 }
 
+.toast-message-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  width: 100%;
+  z-index: 100000;
+}
+
+.toast-message-container .alert {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+
 .loading-spinner-container {
   background-color: white;
   width: 5em;
@@ -1679,6 +1697,120 @@
   line-height: 2.45;
   text-align: center;
   color: #455d75;
+}
+
+.mobile-rewards-box {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f3f7f9;
+  margin-top: 30px;
+  padding: 20px;
+  position: relative;
+}
+
+.mobile-rewards-box .featured {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  color: white;
+  border-radius: 3px;
+  background-color: #fec100;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.mobile-rewards-box .phone-holder {
+  position: relative;
+}
+
+.mobile-rewards-box .green-tick {
+  position: absolute;
+  width: 20px;
+  bottom: -6px;
+  left: 30px;
+}
+
+.mobile-rewards-box .phones {
+  height: 90px;
+}
+
+.mobile-rewards-box .phones.small {
+  height: 63px;
+}
+
+.mobile-rewards-box h2 {
+  font-family: Lato;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.17;
+  color: #0d1d29;
+  margin-bottom: 2px;
+}
+
+.mobile-rewards-box .install {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.4rem;
+  color: var(--dark);
+}
+
+.mobile-rewards-box .ogn-value {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007fff;
+}
+
+.mobile-rewards-box .ogn-icon-small {
+  width: 20px;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+.mobile-rewards-box .download-icon {
+  width: 135px;
+  height: 42px;
+}
+
+.mobile-rewards-box.mobile .phones {
+  height: 117px;
+}
+
+.mobile-rewards-box.mobile .phones.small {
+  height: 55px;
+}
+
+.mobile-rewards-box.mobile .green-tick {
+  position: absolute;
+  width: 20px;
+  bottom: -6px;
+  left: 25px;
+}
+
+.mobile-rewards-box.mobile h2 {
+  font-size: 18px;
+}
+
+.mobile-rewards-box.mobile .install {
+  font-size: 14px;
+  line-height: 1rem;
+}
+
+.mobile-rewards-box.mobile .ogn-value {
+  font-size: 14px;
+}
+
+.mobile-rewards-box.mobile .ogn-icon-small {
+  width: 14px;
+  margin-left: 5px;
+  margin-right: 3px;
+  margin-bottom: 0px;
+}
+
+.mobile-rewards-box.mobile .download-icon {
+  width: 96px;
+  height: 30px;
 }
 
 .action-list-modal.pl-modal .pl-modal-table .pl-modal-cell .action-list-modal {
@@ -2649,12 +2781,24 @@
   margin-top: 2.5rem;
 }
 
-.profile-created .actions button {
+.profile-created .actions .btn {
   width: 50%;
 }
 
-.modal-content .profile-created .actions button {
+.profile-created .partner-referral-reward {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.btn-dark {
+  background-color: #0d1d29;
+}
+
+.modal-content .profile-created .actions .btn {
   width: 100%;
+  padding: 0.5rem;
 }
 
 .published-info-box {
@@ -7036,6 +7180,14 @@
   padding: 1rem;
 }
 
+.partner-referral-reward {
+  font-family: Poppins;
+  font-size: 2.125rem;
+  font-weight: bold;
+  color: #0d1d29;
+  text-align: center !important;
+}
+
 .onboard .onboard-box.profile-rewards {
   padding: 0;
 }
@@ -8441,7 +8593,7 @@
   display: block;
   position: relative;
   padding-left: 28px;
-  margin-bottom: 0px;
+  margin: 0 10px 0 10px;
   cursor: pointer;
   font-size: 18px;
   -webkit-user-select: none;
@@ -8455,6 +8607,8 @@
 
 .growth-enrollment-modal .country-check-label {
   font-weight: 300;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .growth-enrollment-modal .terms-title {
