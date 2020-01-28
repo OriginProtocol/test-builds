@@ -8767,309 +8767,316 @@
   }
 }
 
+.growth-welcome-holder {
+  height: 100vh;
+}
+
 .growth-welcome {
-  background-color: #131d27;
+  background: #007fff;
+  color: #fff;
 }
 
-.growth-welcome .top-padding {
-  padding-top: 60px;
+.growth-welcome .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.growth-welcome .logo {
-  width: 118px;
+.growth-welcome p {
+  color: #fff;
+  font-weight: 300;
 }
 
-.growth-welcome .enroll-button.mobile {
-  margin-bottom: 40px;
+.growth-welcome hr {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  background: #fff;
+  height: 1px;
+  width: 84%;
+  border: 0;
+  padding: 0;
 }
 
-.growth-welcome .enroll-button {
-  margin-bottom: 134px;
-  max-width: 100%;
+.growth-welcome #app-download-button img {
+  width: 100%;
+  max-width: 260px;
 }
 
-.growth-welcome .title-text {
-  margin-top: 40px;
-  margin-bottom: 16px;
-  font-family: Poppins;
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 1.27;
+.growth-welcome #app-download-button {
+  background-color: #007fff;
+  border: 0;
+  margin: 0 auto 50px;
+  width: 280px;
+}
+
+.growth-welcome .mobile-signup {
+  width: 84%;
+}
+
+.growth-welcome .signup-button {
+  font-size: 1.125rem;
+  width: 100%;
+  border-radius: 26px;
+  border: solid 1px var(--white);
+  padding: 12px 0;
+  margin: 0 auto;
+  max-width: 350px;
   color: white;
-}
-
-.growth-welcome .sub-title {
-  font-size: 24px;
-  font-weight: normal;
-  color: white;
-  line-height: 1.38;
-  color: white;
-}
-
-.growth-welcome .invited-by {
-  color: white;
-  font-weight: normal;
-}
-
-.growth-welcome .spaceman.center {
-  background-position: center left;
-}
-
-.growth-welcome .spaceman {
-  background-image: url(images/growth/spaceman.svg);
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  margin-left: -100px;
-  padding-left: 100px;
-  max-width: 600px;
-}
-
-.growth-welcome .btn {
-  margin-top: 40px;
-  width: 336px;
-  height: 60px;
-  font-size: 24px;
-  font-weight: 900;
-}
-
-.growth-welcome .personalised-bar .profile-holder {
-  background-color: var(--dark-grey-blue);
-  width: 80px;
-  height: 80px;
-  border-radius: 75px;
-  overflow: hidden;
-}
-
-.growth-welcome .personalised-bar .profile-holder img {
-  margin-top: 20px;
-}
-
-.growth-welcome .personalised-bar {
-  margin-top: 64px;
-}
-
-.growth-welcome .second-fold-holder .left-column {
-  padding-bottom: 75px;
-}
-
-.growth-welcome .second-fold-holder .container {
-  padding-top: 73px;
-}
-
-.growth-welcome .second-fold-holder .title {
-  font-size: 36px;
-  font-weight: 600;
-  font-family: Poppins;
-}
-
-.growth-welcome .second-fold-holder .sub-title {
-  font-weight: normal;
-  color: var(--dusk);
-  padding-right: 100px;
-}
-
-.growth-welcome .second-fold-holder .sub-title.mobile {
-  padding-right: 0px;
-}
-
-.growth-welcome .second-fold-holder .feature-row {
-  margin-top: 50px;
-  padding-left: 6px;
-}
-
-.growth-welcome .second-fold-holder .feature-text {
-  margin-left: 27px;
-  margin-right: 55px;
-  font-weight: bold;
-}
-
-.growth-welcome .second-fold-holder {
-  background-color: white;
-  font-family: Lato;
-  font-color: var(--dark);
-}
-
-.growth-welcome .third-fold-holder .container {
-  max-width: 650px;
-}
-
-.growth-welcome .third-fold-holder .title {
-  font-size: 36px;
-  font-weight: 600;
-  font-family: Poppins;
-}
-
-.growth-welcome .third-fold-holder .sub-title {
-  font-weight: normal;
-  color: var(--dusk);
-  line-height: normal;
-}
-
-.growth-welcome .third-fold-holder .text {
-  font-size: 12px;
-  font-weight: normal;
-  font-family: Lato;
-  color: var(--dusk);
-  line-height: normal;
-}
-
-.growth-welcome .third-fold-holder .btn {
-  font-size: 18px;
-  width: 200px;
-  height: 50px;
-}
-
-.growth-welcome .third-fold-holder {
-  background-color: var(--pale-grey-eight);
-  padding-bottom: 145px;
-  padding-top: 145px;
+  background-color: transparent;
   text-align: center;
 }
 
-.growth-welcome .fourth-fold-holder .coins-section {
-  background-color: var(--clear-blue);
-  height: 340px;
-  width: 100%;
-  background-image: url(images/growth/reward-ogn-coins.svg);
-  background-position: bottom right;
-  background-repeat: no-repeat;
+.growth-welcome .qrcode-wrapper p {
+  color: black;
 }
 
-.growth-welcome .fourth-fold-holder .promoting-section .text-holder {
-  max-width: 350px;
+.growth-welcome .signup-button:hover {
+  background-color: #036ddd;
+  cursor: pointer;
 }
 
-.growth-welcome .fourth-fold-holder .promoting-section .title {
-  font-family: Poppins;
-  font-size: 36px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 1.14;
-  color: var(--dark);
+.growth-welcome #referral-campaign-header .logo {
+  display: block;
+  margin: 10px 0;
+  padding: 15px;
 }
 
-.growth-welcome .fourth-fold-holder .promoting-section .text {
-  font-family: Lato;
-  font-weight: normal;
-  line-height: 1.44;
-  color: var(--dark);
+.growth-welcome #referral-campaign-header img {
+  height: 22px;
+  width: auto;
+  margin: 10px auto;
 }
 
-.growth-welcome .fourth-fold-holder .promoting-section {
-  background-color: var(--pale-grey-eight);
-  height: 500px;
-  padding-top: 150px;
-  padding-right: 135px;
-  padding-left: 35px;
+.growth-welcome #referral-campaign-header {
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.growth-welcome .fourth-fold-holder .promoting-section.mobile {
-  padding-top: 50px;
-  padding-right: 35px;
+.growth-welcome .avatar-text.personalised {
+  text-align: left;
 }
 
-.growth-welcome .fourth-fold-holder .arrows-section {
-  background-color: #5f41d2;
-  height: 340px;
-  width: 100%;
-  background-image: url(images/growth/purple-up-arrow.svg);
-  background-position: bottom left;
-  background-repeat: repeat;
-}
-
-.growth-welcome .fourth-fold-holder .rewards-section .text-holder {
-  max-width: 350px;
-}
-
-.growth-welcome .fourth-fold-holder .rewards-section .title {
-  font-family: Poppins;
-  font-size: 36px;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 1.14;
-  color: white;
-}
-
-.growth-welcome .fourth-fold-holder .rewards-section .text {
-  font-family: Lato;
-  font-weight: normal;
-  line-height: 1.44;
-  color: white;
-}
-
-.growth-welcome .fourth-fold-holder .rewards-section {
-  background-color: var(--dark-grey-blue);
-  height: 500px;
-  padding-top: 150px;
-  padding-left: 135px;
-  padding-right: 35px;
-}
-
-.growth-welcome .fourth-fold-holder .rewards-section.mobile {
-  padding-top: 50px;
-  padding-left: 35px;
-}
-
-.growth-welcome .start-earning-fold-holder .title {
-  font-family: Poppins;
-  font-size: 36px;
-  font-weight: 600;
-}
-
-.growth-welcome .start-earning-fold-holder .text {
-  font-family: Lato;
-  font-weight: normal;
-  font-style: normal;
+.growth-welcome #tagline.personalised {
   margin-top: 10px;
 }
 
-.growth-welcome .start-earning-fold-holder .number-point {
-  font-family: Lato;
-  font-weight: normal;
-  border: solid 1px var(--white);
-  border-radius: 50px;
-  width: 46px;
-  height: 46px;
-  margin-top: 42px;
+.growth-welcome #tagline {
+  margin: 0 25px 25px 25px;
 }
 
-.growth-welcome .start-earning-fold-holder .btn {
-  font-size: 18px;
-  min-width: 200px;
-  width: auto;
-  height: 50px;
-  border: solid 1px white;
-  margin-top: 62px;
+.growth-welcome #intro p {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  margin: 30px;
 }
 
-.growth-welcome .start-earning-fold-holder .btn:hover {
-  color: var(--clear-blue);
-  background-color: white;
-}
-
-.growth-welcome .start-earning-fold-holder a {
-  color: white;
-  text-decoration: underline;
-}
-
-.growth-welcome .start-earning-fold-holder .link-holder {
-  margin-top: 60px;
-}
-
-.growth-welcome .start-earning-fold-holder {
-  background-color: var(--clear-blue);
-  color: white;
-  padding-top: 140px;
-  padding-bottom: 135px;
+.growth-welcome #callout p {
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  margin-bottom: -64px;
+  font-size: 27px;
+  font-weight: 1000;
+  text-transform: uppercase;
 }
 
-.growth-welcome .origin-showcase {
-  background-image: url(images/growth/marketplace-screenshots-graphic.png);
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  max-width: 600px;
+.growth-welcome #callout .value {
+  display: block;
+  font-size: 72px;
+}
+
+.growth-welcome #download {
+  text-align: center;
+}
+
+.growth-welcome #rewards h2 {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.growth-welcome #rewards {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  line-height: 1.44;
+  margin: 30px;
+}
+
+.growth-welcome #screenshot1 img {
+  position: relative;
+  left: 15px;
+}
+
+.growth-welcome #screenshot1 {
+  text-align: center;
+}
+
+.growth-welcome #screenshot2 img {
+  position: relative;
+  left: 15px;
+}
+
+.growth-welcome #screenshot1 hr {
+  width: 100%;
+  margin: 0;
+}
+
+.growth-welcome #screenshot2 {
+  text-align: center;
+}
+
+.growth-welcome #screenshot2 hr {
+  width: 100%;
+  margin: 0;
+}
+
+.growth-welcome .avatar {
+  float: left;
+  height: 80px;
+  width: 80px;
+  border: 1px #fff solid;
+  border-radius: 40px;
+  margin: 5px;
+  padding: 0;
+  overflow: hidden;
+  background-position: center;
+  background-size: contain;
+}
+
+.growth-welcome .avatar-container p {
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-family: "Lato" sans-serif;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .growth-welcome #screenshot1 {
+    margin-top: 100px;
+  }
+
+  .growth-welcome #screenshot1 hr {
+    display: none;
+  }
+
+  .growth-welcome #screenshot2 hr {
+    display: none;
+  }
+
+  .growth-welcome #tagline p {
+    font-size: 25px;
+  }
+
+  .growth-welcome #callout {
+    font-size: 32px;
+  }
+
+  .growth-welcome #callout .value {
+    font-size: 88px;
+  }
+
+  .growth-welcome #intro p {
+    font-size: 18px;
+  }
+
+  .growth-welcome #referral-campaign-header {
+    margin-left: 30px;
+  }
+
+  .growth-welcome #screenshot2 img {
+    left: 0;
+  }
+
+  .growth-welcome #screenshot2-desktop img {
+    left: 0;
+  }
+
+  .growth-welcome .avatar {
+    margin: 25px;
+  }
+
+  .growth-welcome .avatar-container p {
+    padding-top: 30px;
+  }
+
+  .growth-welcome .qrcode-wrapper p {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.86;
+    margin-top: 2px;
+    text-align: center;
+  }
+
+  .growth-welcome .qrcode-wrapper img {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .growth-welcome .qrcode-wrapper {
+    background: #fff;
+    color: #000;
+    padding: 5px;
+    margin: 0 auto;
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+  }
+
+  .growth-welcome .what .qrcode-wrapper {
+    margin: 0 0 0 30px;
+  }
+
+  .growth-welcome .page-splitter {
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  .growth-welcome {
+    padding-bottom: 50px;
+    clear: both;
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .container {
+    max-width: 960px;
+  }
+
+  #screenshot1 img {
+    left: 60px;
+  }
+
+  #screenshot2 img {
+    left: 60px;
+  }
+
+  #screenshot2-desktop img {
+    left: 60px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  #screenshot1 img {
+    left: 110px;
+  }
+
+  #screenshot2 img {
+    left: 110px;
+  }
+
+  #screenshot2-desktop img {
+    left: 110px;
+  }
 }
 
 .completed-action-groups {
@@ -10464,7 +10471,7 @@ svg.help-icon:hover path {
   background-image: url(images/nav/gear-icon.svg);
 }
 
-.navbar .nav-item.mobile .dropdown-menu .dropdown-item.feedback::before {
+.navbar .nav-item.mobile .dropdown-menu .dropdown-item.help::before {
   background-image: url(images/nav/feedback-icon.svg);
 }
 
@@ -11078,12 +11085,12 @@ svg.help-icon:hover path {
   padding: 0 1rem;
 }
 
-.navbar.dark .navbar-brand {
+.navbar.blue .navbar-brand {
   background: url(images/origin-logo.svg) no-repeat center;
 }
 
-.navbar.dark {
-  background-color: #131d27;
+.navbar.blue {
+  background-color: #007fff;
 }
 
 .navbar:not(.no-border) {
@@ -12638,6 +12645,7 @@ svg.help-icon:hover path {
 .send-message button {
   margin: auto 0;
   width: auto;
+  min-width: 150px;
 }
 
 .send-message img.add-photo {
@@ -13250,13 +13258,6 @@ main {
 @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .download-wallet-cta .thirdparty-wallets .thirdparty-wallet.coinbase:before {
     background-image: url("images/onboard/wallets/coinbasewallet@2x.png");
-    background-size: contain;
-  }
-}
-
-@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .growth-welcome .origin-showcase {
-    background-image: url("images/growth/marketplace-screenshots-graphic@2x.png");
     background-size: contain;
   }
 }

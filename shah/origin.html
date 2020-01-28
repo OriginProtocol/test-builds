@@ -14,7 +14,7 @@
     <meta property="og:image" content="https://www.shoporigin.com/images/join-origin-earn-tokens.png">
     <meta name="apple-itunes-app" content="app-id=1446091928">
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="app.a7dce6e7.css" />
+    <link rel="stylesheet" href="app.fe9d4a0c.css" />
   </head>
   <body><div id="app"><div class="loading-screen"></div></div></body>
   <!-- <script crossorigin src="vendor/openpgp.min.js"></script>
@@ -28,8 +28,54 @@
   <script>
     localStorage.ognNetwork = "origin"
     localStorage.metaMaskEnabled = "true"
+
+    const offScreenOffset = {
+      webWidget: {
+        offset: {
+          horizontal: '-100%',
+          vertical: '-100%',
+          mobile: {
+            horizontal: '-100%',
+            vertical: '-100%'
+          }
+        }
+      }
+    }
+
+    window.zESettings = offScreenOffset
+    
+    // override Zendesk widget default behavior
+    window.onload = () => {
+      if (typeof zE === 'undefined') {
+        return
+      }
+
+      function openZendeskChat() {
+        zE.activate()
+        zE('webWidget', 'updateSettings', {
+            webWidget: {
+              offset: {
+                vertical: '0px',
+                horizontal: '0px',
+                mobile: {
+                  vertical: '0px',
+                  horizontal: '0px'
+                }
+              }
+            }
+        })
+      }
+
+      zE('webWidget:on', 'close', function () {
+        zE('webWidget', 'updateSettings', offScreenOffset)
+      })
+
+      window.openZendeskChat = openZendeskChat
+    }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106384880-2"></script>
+  <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=28724146-15b3-4832-9439-a90ae062f591"></script>
+
   <script>
     var hostname = window.location.hostname
     window.dataLayer = window.dataLayer || []
@@ -40,5 +86,5 @@
       gtag('js', new Date());
     }
   </script>
-  <script src="app.a7dce6e7.js"></script>
+  <script src="app.fe9d4a0c.js"></script>
 </html>
